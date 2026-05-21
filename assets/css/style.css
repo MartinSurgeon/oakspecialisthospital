@@ -3040,18 +3040,22 @@ Start  Home Two Csss
 }
 .collage-main-img img {
   width: 100%;
+  height: 380px;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15);
 }
 .collage-sub-img {
   position: absolute;
-  width: 50%;
+  width: 55%;
   right: 0;
   bottom: 0;
   z-index: 2;
 }
 .collage-sub-img img {
   width: 100%;
+  height: 380px;
+  object-fit: cover;
   border: 8px solid #ffffff;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(4, 28, 51, 0.2);
@@ -3064,6 +3068,10 @@ Start  Home Two Csss
   .about-image-collage {
     margin-bottom: 50px;
     padding-right: 20px;
+  }
+  .collage-main-img img,
+  .collage-sub-img img {
+    height: 280px;
   }
 }
 .about_right_side {
@@ -7281,6 +7289,23 @@ to {
     object-fit: cover !important;
   }
 }
+
+/* ==========================================================================
+   Header Light/White Background Override for Inner Pages Legibility
+   ========================================================================== */
+.meedy_nav_manu.header-light:not(.sticky) {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f2f6f9 !important;
+}
+
+.meedy_nav_manu.header-light:not(.sticky) .meedy_menu > ul > li > a {
+  color: #091E3E !important; /* Deep navy */
+}
+
+.meedy_nav_manu.header-light:not(.sticky) .meedy_menu > ul > li > a:hover {
+  color: #006d87 !important; /* Teal-blue (theme secondary accent) */
+}
+
 
 
 
