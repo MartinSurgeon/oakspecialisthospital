@@ -1108,12 +1108,13 @@ h3.pricing-plan2 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height: auto !important;
-    padding: 130px 0 80px !important;
+    padding: 110px 0 80px !important;
   }
 
   .hero-content {
@@ -1446,12 +1447,13 @@ p.desc-style1 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height: auto !important;
-    padding: 130px 0 80px !important;
+    padding: 110px 0 80px !important;
   }
 
   .hero-content {
@@ -1922,12 +1924,13 @@ p.qouik2 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     height: auto !important;
-    padding: 130px 0 85px !important;
+    padding: 110px 0 85px !important;
   }
 
   .hero-content {
@@ -2876,23 +2879,76 @@ h3.blog-dtls-title3 {
   }
 }
 
-/* Custom Fix for Hero Background legibility, Cursor click blocking, and CTA redirection on mobile */
+/* Custom Fix for Hero Background legibility, Cursor click blocking, CTA redirection, and Mobile Header */
 @media (max-width: 991px) {
+
+  /* ---- Hide custom cursor on mobile ---- */
   .cursor, .cursor2 {
     display: none !important;
   }
+
+  /* ---- Fixed mobile header ---- */
+  .mobile-menu-area.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    background-color: #041c33 !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  /* Mobile header bar: logo + CTA */
+  .mobile-header-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+  }
+  .mobile-logo img {
+    max-height: 42px !important;
+    width: auto !important;
+  }
+  .mobile-book-btn {
+    display: inline-block !important;
+    background-color: #0495ff !important;
+    color: #ffffff !important;
+    padding: 9px 15px !important;
+    border-radius: 24px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: 'ClashDisplay-Variable', sans-serif !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+    cursor: pointer !important;
+  }
+  .mobile-book-btn:hover,
+  .mobile-book-btn:active {
+    background-color: #dceaa2 !important;
+    color: #041c33 !important;
+  }
+
+  /* ---- Discover More / mediket-btn touch fix ---- */
   .mediket-btn {
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 9999 !important;
     pointer-events: auto !important;
   }
   .mediket-btn a {
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 9999 !important;
     pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: rgba(4, 149, 255, 0.2) !important;
+    cursor: pointer !important;
   }
-  .hero-content h1, 
-  .hero-content h4, 
+
+  /* ---- Hero text legibility ---- */
+  .hero-content h1,
+  .hero-content h4,
   .hero-content p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
   }
