@@ -2901,3 +2901,149 @@ h3.blog-dtls-title3 {
   }
 }
 
+@media (max-width: 991px) {
+  /* Center-align section wrapper text */
+  .about-serction,
+  .service-section,
+  .why-choose-us-serction,
+  .case_study_sextion,
+  .team-section,
+  .testimonial-section,
+  .blog-section,
+  .appoinment-section,
+  .mediket-subscribe {
+    text-align: center !important;
+  }
+
+  /* Center Section Titles and Headings */
+  .mediket-section-title {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .mediket-section-title h1,
+  .mediket-section-title h4,
+  .mediket-section-title p {
+    text-align: center !important;
+  }
+  .mediket-section-title p {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Remove asymmetrical borders and padding */
+  .about_list_item {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  p.about_qute {
+    padding-left: 0 !important;
+  }
+  p.about_qute:before {
+    display: none !important;
+  }
+
+  /* Center lists as blocks but keep text left-aligned */
+  .about-service-list ul,
+  .case_list_item ul {
+    display: inline-block !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+  }
+
+  /* Center Flex containers */
+  .about_experience,
+  .mediket-author,
+  .user-info {
+    justify-content: center !important;
+  }
+  .mediket-author:before {
+    left: 0 !important;
+    width: 100% !important;
+  }
+  .blogs-category ul {
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  /* Center buttons */
+  .mediket-btn,
+  .mediket-btn.text-right,
+  .team-section .text-right,
+  .blog-section .text-right {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .mediket-btn a {
+    margin-top: 20px !important;
+  }
+  .submit-button {
+    text-align: center !important;
+  }
+
+  /* Testimonial Pointer Adjustment */
+  .testi-content:before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .testi-quote {
+    text-align: center !important;
+  }
+  .testi-quote img {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  ul.testi-rating {
+    justify-content: center !important;
+    display: flex !important;
+  }
+
+  /* Alignment for Service Boxes on Mobile & Tablet */
+  .single-service-box {
+    text-align: center !important;
+  }
+  .single_service_inner {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .service-content {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .service-icon {
+    display: none !important;
+  }
+
+  /* Why Choose Us boxes alignment */
+  .mediket-choose-box {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .mediket-choose-icon {
+    margin: 0 auto 15px !important;
+  }
+  .choose_appoinment_icon img {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .appoinment_contnet p {
+    margin-bottom: 30px !important;
+  }
+
+  /* Case study layout borders */
+  .case_list_item:before {
+    width: 100% !important;
+  }
+
+  /* Appointment form checkbox centering */
+  .check_bx {
+    justify-content: center !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
