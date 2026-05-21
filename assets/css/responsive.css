@@ -1108,11 +1108,14 @@ h3.pricing-plan2 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    background-attachment: scroll !important;
     height: auto !important;
+    min-height: 100vh !important;
     padding: 130px 0 80px !important;
   }
 
@@ -1446,11 +1449,14 @@ p.desc-style1 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    background-attachment: scroll !important;
     height: auto !important;
+    min-height: 100vh !important;
     padding: 130px 0 80px !important;
   }
 
@@ -1922,11 +1928,14 @@ p.qouik2 {
 
   /* Hero Section */
   .hero-section {
-    background: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    background-attachment: scroll !important;
     height: auto !important;
+    min-height: 100vh !important;
     padding: 130px 0 85px !important;
   }
 
@@ -2888,8 +2897,11 @@ h3.blog-dtls-title3 {
   }
   .mediket-btn a {
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 9999 !important;
     pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: rgba(4, 149, 255, 0.2) !important;
+    cursor: pointer !important;
   }
   .hero-content h1, 
   .hero-content h4, 
@@ -3047,3 +3059,50 @@ h3.blog-dtls-title3 {
   }
 }
 
+/* ============================================================
+   Mobile Appointment Button — visible on mobile/tablet
+   ============================================================ */
+@media (max-width: 991px) {
+  .mobile-appt-btn-wrap {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+  }
+
+  .mobile-appt-btn {
+    display: inline-block;
+    background-color: #0495ff;
+    color: #ffffff !important;
+    padding: 14px 28px;
+    border-radius: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 20px rgba(4, 149, 255, 0.45);
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    white-space: nowrap;
+  }
+
+  .mobile-appt-btn i {
+    margin-left: 6px;
+    transform: rotate(-45deg);
+    display: inline-block;
+    font-size: 11px;
+    position: relative;
+    top: 1px;
+  }
+
+  .mobile-appt-btn:hover,
+  .mobile-appt-btn:active {
+    background-color: #041c33;
+    color: #ffffff !important;
+    transform: translateX(-50%) scale(1.03);
+  }
+}
