@@ -468,7 +468,7 @@ ul.sub-menu li:hover a span {
   background: url(../images/slider/banner.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 750px;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -715,7 +715,7 @@ a.mediket-btn:hover {
 <!-- ============================================================== -->*/
 
 .feature-serction {
-  padding: 100px 0 70px;
+  padding: 40px 0 70px;
   position: relative;
   background: #eef7ff;
 }
@@ -7227,7 +7227,7 @@ to {
 /* 7. Hero Section Spacing & Height Synchronization */
 @media (min-width: 992px) {
   .hero-section {
-    height: 800px !important;
+    height: 680px !important;
   }
   .hero-section .row {
     align-items: stretch !important;
