@@ -337,7 +337,7 @@ Start Home Two
   display: none;
 }
 .hero-content p {
-  font-size: 17px;;
+  font-size: 17px;
 }
 .hero-thumb {
   margin-left: 20px;
@@ -717,15 +717,19 @@ h3.pricing-plan2 {
   /* Hero Section */
 
   .hero-section {
-    height: 800px;
+    height: 680px;
   }
 
   .hero-content h1 {
-    font-size: 47px;
+    font-size: 38px !important;
+    line-height: 48px !important;
   }
 
   .hero-content p {
-    width: 90%;
+    width: 100%;
+    font-size: 16px !important;
+    line-height: 26px !important;
+    margin: 15px 0 25px !important;
   }
 
   .mediket-btn a {
@@ -737,13 +741,26 @@ h3.pricing-plan2 {
     top: -131px;
   }
   .hero-thumb {
-    display: none;
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 600px !important;
+    width: 100% !important;
+  }
+  .hero-thumb > img {
+    height: 400px !important;
+    object-fit: cover !important;
   }
   .hero-socail-icon {
     display: none;
   }
+  .hero-btm-boxs {
+    display: flex !important;
+    gap: 40px !important;
+    align-items: center !important;
+    margin-top: 30px !important;
+  }
   .hero-btm-boxs:before {
-    right: 55%;
+    display: none !important;
   }
 
   /* Counter Section */
@@ -1085,23 +1102,37 @@ h3.pricing-plan2 {
 
   /* Hero Section */
   .hero-section {
-    height: 700px;
+    height: 550px;
 }
 
   .hero-content h1 {
-    font-size: 35px;
-    line-height: 50px;
-}
+    font-size: 32px !important;
+    line-height: 42px !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    line-height: 25px !important;
+    margin: 15px 0 25px !important;
+  }
 
   .hero-thumb {
-    display: none;
+    display: none !important;
   }
 
   .hero-socail-icon {
     display: none;
   }
+  .hero-btm-boxs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 30px !important;
+  }
   .hero-btm-boxs:before {
-    right: 39%;
+    display: none !important;
   }
 
   .mediket-section-title h1 {
@@ -1398,35 +1429,46 @@ p.desc-style1 {
 
   /* Hero Section */
   .hero-section {
-    height: 700px;
+    height: 550px;
 }
 
   .hero-content h1 {
-    font-size: 35px;
-    line-height: 50px;
-}
+    font-size: 30px !important;
+    line-height: 40px !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    line-height: 25px !important;
+    margin: 15px 0 25px !important;
+  }
 
   .hero-thumb {
-    display: none;
+    display: none !important;
   }
 
   .hero-socail-icon {
     display: none;
-  }
-  .hero-btm-boxs:before {
-    right: 39%;
   }
 
   .mediket-section-title h1 {
     font-size: 25px;
     line-height: 40px;
   }
-.hero-btm-boxs {
-  gap: 29px;
-}
-.mediket-hero-content h4 {
-  font-size: 14px;
-}
+  .hero-btm-boxs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 30px !important;
+  }
+  .hero-btm-boxs:before {
+    display: none !important;
+  }
+  .mediket-hero-content h4 {
+    font-size: 14px;
+  }
 
 .about-thumb {
   margin-left: 0;
@@ -1852,23 +1894,26 @@ p.qouik2 {
 
   /* Hero Section */
   .hero-section {
-    height: 700px;
+    height: 500px;
 }
 
-.hero-content h1 {
-  font-size: 20px;
-  line-height: 35px;
-}
+  .hero-content h1 {
+    font-size: 26px !important;
+    line-height: 36px !important;
+  }
+
+  .hero-content p {
+    font-size: 15px !important;
+    line-height: 25px !important;
+    margin: 15px 0 25px !important;
+  }
 
   .hero-thumb {
-    display: none;
+    display: none !important;
   }
 
   .hero-socail-icon {
     display: none;
-  }
-  .hero-btm-boxs:before {
-    right: 39%;
   }
 
   .mediket-section-title h1 {
@@ -1876,11 +1921,18 @@ p.qouik2 {
     line-height: 28px;
   }
   .hero-btm-boxs {
-    display: block;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 30px !important;
   }
-.mediket-hero-content h4 {
-  font-size: 14px;
-}
+  .hero-btm-boxs:before {
+    display: none !important;
+  }
+  .mediket-hero-content h4 {
+    font-size: 14px;
+  }
 
 .about-thumb {
   margin-left: 0;
@@ -2782,6 +2834,28 @@ h3.blog-dtls-title3 {
   .service_btn a {
     padding: 7px 18px;
     font-size: 12px;
+  }
+}
+
+/* Custom Fix for Hero Background legibility, Cursor click blocking, and CTA redirection on mobile */
+@media (max-width: 991px) {
+  .cursor, .cursor2 {
+    display: none !important;
+  }
+  .mediket-btn {
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+  }
+  .mediket-btn a {
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+  }
+  .hero-content h1, 
+  .hero-content h4, 
+  .hero-content p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
   }
 }
 
