@@ -1113,10 +1113,8 @@ h3.pricing-plan2 {
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-attachment: scroll !important;
     height: auto !important;
-    min-height: 100vh !important;
-    padding: 130px 0 80px !important;
+    padding: 110px 0 80px !important;
   }
 
   .hero-content {
@@ -1454,10 +1452,8 @@ p.desc-style1 {
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-attachment: scroll !important;
     height: auto !important;
-    min-height: 100vh !important;
-    padding: 130px 0 80px !important;
+    padding: 110px 0 80px !important;
   }
 
   .hero-content {
@@ -1933,10 +1929,8 @@ p.qouik2 {
     background-position: center center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-attachment: scroll !important;
     height: auto !important;
-    min-height: 100vh !important;
-    padding: 130px 0 85px !important;
+    padding: 110px 0 85px !important;
   }
 
   .hero-content {
@@ -2885,14 +2879,62 @@ h3.blog-dtls-title3 {
   }
 }
 
-/* Custom Fix for Hero Background legibility, Cursor click blocking, and CTA redirection on mobile */
+/* Custom Fix for Hero Background legibility, Cursor click blocking, CTA redirection, and Mobile Header */
 @media (max-width: 991px) {
+
+  /* ---- Hide custom cursor on mobile ---- */
   .cursor, .cursor2 {
     display: none !important;
   }
+
+  /* ---- Fixed mobile header ---- */
+  .mobile-menu-area.sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+    background-color: #041c33 !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  /* Mobile header bar: logo + CTA */
+  .mobile-header-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+  }
+  .mobile-logo img {
+    max-height: 42px !important;
+    width: auto !important;
+  }
+  .mobile-book-btn {
+    display: inline-block !important;
+    background-color: #0495ff !important;
+    color: #ffffff !important;
+    padding: 9px 15px !important;
+    border-radius: 24px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: 'ClashDisplay-Variable', sans-serif !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
+    cursor: pointer !important;
+  }
+  .mobile-book-btn:hover,
+  .mobile-book-btn:active {
+    background-color: #dceaa2 !important;
+    color: #041c33 !important;
+  }
+
+  /* ---- Discover More / mediket-btn touch fix ---- */
   .mediket-btn {
     position: relative !important;
-    z-index: 999 !important;
+    z-index: 9999 !important;
     pointer-events: auto !important;
   }
   .mediket-btn a {
@@ -2903,8 +2945,10 @@ h3.blog-dtls-title3 {
     -webkit-tap-highlight-color: rgba(4, 149, 255, 0.2) !important;
     cursor: pointer !important;
   }
-  .hero-content h1, 
-  .hero-content h4, 
+
+  /* ---- Hero text legibility ---- */
+  .hero-content h1,
+  .hero-content h4,
   .hero-content p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
   }
@@ -3059,50 +3103,3 @@ h3.blog-dtls-title3 {
   }
 }
 
-/* ============================================================
-   Mobile Appointment Button — visible on mobile/tablet
-   ============================================================ */
-@media (max-width: 991px) {
-  .mobile-appt-btn-wrap {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    text-align: center;
-  }
-
-  .mobile-appt-btn {
-    display: inline-block;
-    background-color: #0495ff;
-    color: #ffffff !important;
-    padding: 14px 28px;
-    border-radius: 32px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'ClashDisplay-Variable', sans-serif;
-    letter-spacing: 0.3px;
-    box-shadow: 0 4px 20px rgba(4, 149, 255, 0.45);
-    transition: background 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
-    pointer-events: auto !important;
-    touch-action: manipulation !important;
-    white-space: nowrap;
-  }
-
-  .mobile-appt-btn i {
-    margin-left: 6px;
-    transform: rotate(-45deg);
-    display: inline-block;
-    font-size: 11px;
-    position: relative;
-    top: 1px;
-  }
-
-  .mobile-appt-btn:hover,
-  .mobile-appt-btn:active {
-    background-color: #041c33;
-    color: #ffffff !important;
-    transform: translateX(-50%) scale(1.03);
-  }
-}
