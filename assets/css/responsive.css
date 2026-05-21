@@ -1,0 +1,2787 @@
+/* Normal desktop :1300px. */
+@media (min-width: 1371px) and (max-width: 1600) {
+}
+
+/* large Desktop */
+
+@media (min-width: 1371px) and (max-width: 1600px) {
+
+  .meedy_nav_manu {
+    padding: 20px 0 20px;
+  }
+
+  .meedy_menu > ul > li > a {
+    margin: 0 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+.hero-socail-icon {
+    left: 26px;
+    bottom: 225px;
+}
+
+.hero-thumb {
+  margin-left: 4px;
+}
+.feature-single-box.bx-3 {
+  padding: 29px 16px 40px 40px;
+}
+.feature-content p {
+  font-size: 15px;
+}
+.mediket-section-title h1 {
+  font-size: 32px;
+}
+
+.case_study_sextion {
+  padding: 158px 0 145px 40px;
+}
+.case_study_sextion {
+  padding: 158px 0 120px 40px;
+}
+.case_list .owl-nav {
+  right: -34%;
+  bottom: -11%;
+}
+.counter-single-box {
+  bottom: -21%;
+}
+
+.counter-single-box.bx-1 {
+  gap: 10px;
+}
+.mediket-button a {
+  padding: 14px 19px;
+}
+
+.contact-form-box {
+  padding: 55px 35px 69px;
+}
+.testi-thumb {
+  right: 19%;
+}
+
+
+/* ====================================
+Start Home Two
+======================================= */
+.meedy_nav_manu.style-2 {
+  padding: 20px 20px 20px;
+}
+.about_right_side {
+  margin-left: -25px;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 263px;
+}
+.pricing-single-item .header-button a {
+  padding: 11px 90px;
+}
+.service-section.style-3 {
+  padding: 110px 10px 90px;
+}
+.single-service-box.bx-3 .service-thumb {
+  height: inherit;
+}
+.service_btns {
+  margin-top: 15px;
+}
+.service-contents p {
+  font-size: 14px;
+}
+.service-contents {
+  padding: 0 15px 0;
+}
+.service-contents h3 {
+  margin: 26px 0 13px;
+  font-size: 15px;
+}
+
+.blog-single-box.blog_lists .blog-content {
+  padding: 34px 0 0;
+}
+
+
+
+
+
+
+
+}
+
+
+/* Mediam desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1370px) {
+
+  /* Header */
+
+  .meedy_nav_manu {
+    padding: 20px 5px 20px;
+    margin-bottom: -100px;
+  }
+  .meedy_menu > ul > li > a {
+    margin: 0 8px;
+  }
+  .header-button a {
+    padding: 12px 17px;
+    font-size: 13px;
+  }
+
+  /* Hero Area */
+
+  .hero-content h1 {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .hero-socail-icon {
+    display: none;
+  }
+  .hero-btm-boxs:before {
+    right: 42%;
+  }
+  .hero-thumb {
+    margin-left: -20px;
+  }
+
+  /* feature Section */
+
+.feature-single-box.bx-3 {
+    background: #dceaa2;
+    padding: 29px 26px 42px 40px;
+}
+.feature-content p {
+  font-size: 15px;
+}
+.mediket-section-title h1 {
+  font-size: 32px;
+  line-height: 45px;
+}
+.about-serction {
+  padding: 110px 0 106px;
+}
+.about-img.mr-tp-40 img {
+  width: 100%;
+}
+.service-thumb img {
+  width: inherit;
+}
+.service-section {
+  padding: 50px 0 90px;
+}
+
+/* Why choose us section */
+
+.why-choose-us-serction {
+  padding: 110px 0 70px;
+}
+
+/* Case Study section */
+
+.case_study_sextion {
+  background: #041c33;
+  padding: 171px 0 162px 40px;
+}
+.case_item_left_side {
+  padding: 0 40px 0 0;
+}
+.case_study_content h3 a {
+  font-size: 16px;
+}
+.counter-single-box {
+  padding: 35px 19px 17px;
+  width: 187px;
+  right: -2%;
+  bottom: -6%;
+}
+.case_list .owl-nav {
+  right: -31%;
+  bottom: -18%;
+}
+
+/* ========================================
+   Start Css Home Two
+=========================================== */
+.header-address-info p {
+  font-size: 12px;
+}
+.meedy_nav_manu.style-2 {
+  padding: 20px 5px 20px;
+}
+.about_right_side {
+  margin-left: -21px;
+}
+.about-counter-single-box {
+  padding: 38px 33px 35px;
+}
+.testimonal-thumb img {
+  width: 77%;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 198px;
+}
+.testimonal-thumb {
+  left: 48px;
+}
+.pricing-single-item .header-button a {
+  padding: 11px 88px;
+}
+.service-section.style-3 {
+  padding: 110px 10px 90px;
+}
+.service-section.style-3.boxed {
+  width: calc(111% - 122px);
+  margin: 0;
+  height: 100%;
+  border-radius: 0;
+}
+.service-contents {
+  padding: 0 15px 0;
+}
+.service-contents p {
+  font-size: 13px;
+}
+.service-contents h3 {
+  font-size: 15px;
+}
+.footer-section.style-2 {
+  padding: 117px 16px 34px;
+}
+
+
+
+
+/* Subsecribe Area */
+
+.counter-single-box.bx-1 {
+  gap: 8px;
+}
+.mediket-button a {
+  padding: 14px 18px;
+}
+.contact-form-box {
+  padding: 60px 26px 81px;
+}
+.contact_thumb img {
+  width: 100%;
+  height: 611px;
+}
+.form-box input {
+  padding: 0 0 0 56px;
+}
+.form-box i {
+  left: 20px;
+}
+.form-box:before {
+  left: 45px;
+}
+
+
+.mediket-single-box {
+  padding: 28px 10px 15px;
+}
+.mediket-content h3 {
+  font-size: 15px;
+}
+.mediket-icons {
+  margin-right: 20px;
+}
+
+.blog-single-box.blog_lists .blog-content {
+  padding: 36px 0 26px;
+}
+
+
+  /*  */
+}
+
+/* Mediam desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.meedy_nav_manu {
+  padding: 20px 6px 20px;
+}
+.sidebar {
+    display: none;
+}
+.meedy_menu > ul > li > a {
+  margin: 0 4px;
+  font-size: 13px;
+}
+.meedy_menu > ul > li > a >i {
+  margin-left: 0;
+}
+.header-button a {
+  padding: 12px 16px;
+  font-size: 12px;
+}
+
+
+
+
+  /* Hero Section */
+
+.hero-content h1 {
+    font-size: 36px;
+    line-height: 45px;
+}
+.hero-socail-icon {
+  display: none;
+}
+.hero-btm-boxs {
+  gap: 16px;
+}
+.hero-btm-boxs:before {
+  display: none;
+}
+.hero-content p {
+  font-size: 17px;;
+}
+.hero-thumb {
+  margin-left: 20px;
+}
+
+/* Feature Section */
+
+.feature-single-box.bx-3 {
+  padding: 29px 28px 40px 23px;
+}
+.head-title h2 {
+  font-size: 16px;
+}
+.feature-content p {
+  font-size: 14px;
+}
+.call-info_text h5 {
+  font-size: 15px;
+}
+.feature-single-box.bx-3 .feature-btn {
+  margin-top: 36px;
+}
+.about_list_item {
+  padding: 24px 0 25px 24px;
+}
+.about-shape img {
+  width: 100%;
+}
+.about-service-list ul li {
+  font-size: 14px;
+}
+.mediket-author:before {
+  left: -25px;
+}
+.service-thumb img {
+  width: inherit;
+}
+.single-service-box {
+  padding: 25px 20px 29px;
+}
+.service-icon {
+  right: 15px;
+  top: 13px;
+}
+.about-img img {
+  width: 100%;
+}
+.choose_content h4 {
+  font-size: 18px;
+}
+.why-choose-us-serction {
+  padding: 110px 0 70px;
+}
+.appoinment_contnet h2 {
+  font-size: 18px;
+}
+.contact-with-mediket {
+  top: 171px;
+}
+.case_list .owl-nav {
+  right: -40%;
+  bottom: -2%;
+}
+.counter-single-box {
+  right: 6%;
+  bottom: -79%;
+}
+.team-content h2 {
+  font-size: 20px;
+}
+.team-thumb::before {
+  width: 260px;
+  height: 261px;
+}
+.team-thumb img {
+  width: 100%;
+}
+.subscribe-title h1 {
+  font-size: 25px;
+}
+.mediket-button a {
+  display: block;
+}
+.subscribe_right_side .mediket-button a {
+  display: none;
+}
+.contact-form-box {
+  padding: 44px 20px 50px;
+}
+.form-box i {
+  display: none;
+}
+.form-box:before {
+ display: none;
+}
+.form-box input {
+  padding: 0 18px;
+}
+.form-box select {
+  padding: 0 15px;
+}
+.mediket-section-title h1 {
+  font-size: 26px;
+  line-height: 35px;
+}
+.contact_thumb img {
+  height: 565px;
+}
+.testi-thumb {
+  right: 24%;
+}
+.about-thumb {
+  margin-left: 0;
+  margin-top: 20px;
+}
+.service-content h3 {
+  font-size: 19px;
+  margin: 0;
+}
+.why-choose-us-serction .mediket-section-title p {
+  width: 100%;
+}
+
+
+/* =====================================
+  Start Home Two Css
+======================================== */
+.topber_area {
+  display: none;
+}
+.meedy_nav_manu.style-2 {
+  padding: 20px 5px 20px;
+}
+.boxed {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+}
+.hero-content.style-two p {
+  width: 94%;
+}
+.about-serction.style-2 .about-thumb img {
+  width: 100%;
+}
+.about_right_side {
+  margin-left: 0;
+}
+.mediket-section-title.home-2 h1 {
+  font-size: 29px;
+  line-height: 44px;
+}
+.about-counter-single-box {
+  padding: 38px 15px 35px;
+}
+.style-2.about-serction .mediket-section-title p {
+  width: 71%;
+}
+.about-thumb.right_side {
+  margin-top: -80px;
+}
+.testimonal-thumb {
+  left: 19px;
+}
+.testimonal-thumb img {
+  width: 70%;
+}
+.testi-single-box.bx-2 {
+  padding: 40px 20px 40px 20px;
+}
+.testi-single-box.bx-2 .user-name h4 {
+  font-size: 14px;
+}
+.testi-contents p {
+  font-size: 15px;
+}
+.testi-single-box.bx-2 .user-name h6 {
+  font-size: 14px;
+}
+h3.pricing-plan2 {
+  font-size: 21px;
+}
+.pricing-single-item {
+  padding: 30px 20px 30px;
+}
+.pricing-single-item .header-button a {
+  padding: 11px 77px;
+}
+
+.service-section.style-3 {
+  padding: 110px 0 90px;
+  border-radius: 0;
+}
+.service-section.style-3.boxed {
+  width: calc(100% - 1px);
+  margin: 0;
+}
+.service-contents {
+  padding: 0 10px 0;
+}
+.service-contents h3 {
+  font-size: 14px;
+}
+.service-contents p {
+  font-size: 15px;
+}
+.feature-shape {
+  display: none;
+}
+
+
+
+  /* ************************** *
+    <--Inner Page Section-->
+* **************************** */
+
+  .breatcome-section {
+    background-size: cover;
+  }
+
+  
+
+  /* Service Inner Page */
+
+  .single-services-box {
+    padding: 38px 25px 32px;
+  }
+
+  .services-title h3 {
+    font-size: 20px;
+  }
+
+  .services-desc p {
+    font-size: 16px;
+  }
+  /* Details Page  */
+  .mediket-icons {
+    float: inherit;
+    margin-bottom: 30px;
+  }
+
+  .blog-desc p {
+    font-size: 20px;
+  }
+
+  .accordion li a {
+    font-size: 18px;
+  }
+
+  /* Error Page */
+
+  .error-section {
+    padding: 90px 70px 90px;
+  }
+
+  /* Blog Section */
+  .blog_text {
+    padding: 0 16px 0;
+  }
+  .blog-title h2 a {
+    font-size: 16px;
+  }
+
+
+.mediket-category-box {
+  padding: 30px 20px 24px;
+}
+
+.accordion li a {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 16px 20px 16px 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  /* Project Section inner Page */
+
+  .project-content {
+    padding: 25px 22px 10px;
+    width: 89%;
+  }
+
+  .project-content h2 {
+    font-size: 19px;
+  }
+
+  .project-content h5 {
+    font-size: 14px;
+  }
+
+  .project-icon a {
+    top: 20px;
+  }
+
+  .doctors-service {
+    padding: 22px 20px 20px;
+  }
+
+  .doctor-content h3 {
+    font-size: 15px;
+  }
+
+  /* Testimonial */
+
+  .upp.style-2 .testi-bg .testi-single-box {
+    padding: 5px 35px 40px;
+  }
+
+  .upp.style-2 .user-name h4 {
+    font-size: 20px;
+  }
+
+  .upp.style-2 .testi-desc p {
+    font-size: 18px;
+  }
+
+  .upp.style-2 .user-info {
+    padding: 35px 25px 35px 25px;
+    margin: 15px 25px 0 0;
+  }
+  .side_brs {
+    margin-right: 0;
+  }
+  .blog-single-box.blog_lists .blog-thumb {
+    flex-shrink: 1;
+  }
+
+  .blog-details-single-items {
+    padding: 40px 19px 41px 40px;
+  }
+  .details_rcnt {
+    padding: 34px 20px 10px;
+  }
+  .details_rcnt .category-content h4 a {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  */
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .sticky {
+    position: absolute !important;
+  }
+
+  .topber_area {
+    display: none;
+  }
+
+  .meedy_nav_manu {
+    display: none;
+  }
+
+  /* Hero Section */
+
+  .hero-section {
+    height: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 47px;
+  }
+
+  .hero-content p {
+    width: 90%;
+  }
+
+  .mediket-btn a {
+    padding: 16px 27px;
+    font-size: 17px;
+  }
+
+  .hero-shape {
+    top: -131px;
+  }
+  .hero-thumb {
+    display: none;
+  }
+  .hero-socail-icon {
+    display: none;
+  }
+  .hero-btm-boxs:before {
+    right: 55%;
+  }
+
+  /* Counter Section */
+
+  .counter-serction {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  .counter-items {
+    display: inherit;
+  }
+
+  .counter-right-side {
+    padding-top: 50px;
+  }
+  .about-serction {
+    padding: 90px 0 80px;
+  }
+    .about-shape img {
+      width: 100%;
+  }
+  .service-section {
+    padding: 90px 0 90px;
+  }
+
+  /* Feature Sections */
+
+  .bx-2.feature-single-box {
+    padding: 40px 30px 26px;
+  }
+
+  .head-title h2 {
+    font-size: 19px;
+}
+.why-choose-us-serction {
+  padding: 90px 0 100px;
+}
+.contact-with-mediket {
+  top: 0;
+}
+.case_item_left_side {
+  padding: 0;
+}
+.case_study_sextion {
+  padding: 100px 20px 120px 20px;
+}
+.counter-single-box {
+  right: 14%;
+  bottom: -3%;
+}
+.case_list .owl-nav {
+  display: none;
+}
+.choose_right_side {
+  margin-top: 40px;
+}
+.team-section {
+  padding: 90px 0 70px;
+}
+.team-section .text-right {
+  margin-top: 48px;
+  text-align: left !important;
+}
+.subscribe-title h1 {
+  margin: 0 0 15px;
+}
+.mediket-subscribe {
+  padding: 92px 0 90px;
+}
+.appoinment-section {
+  padding: 100px 48px 100px;
+}
+.contact-form-box {
+  padding: 67px 25px 72px;
+  margin-top: 40px;
+}
+.testimonial-section {
+  padding: 100px 0 94px;
+}
+.testi-thumb {
+  right: 0;
+  bottom: 0;
+}
+.mediket-btn.text-right {
+  text-align: left !important;
+  margin-top: 20px;
+}
+.blog-section {
+  padding: 90px 0 60px;
+}
+.brand-section {
+  padding: 0 0 95px;
+}
+.mediket-company-desc p {
+  font-size: 14px;
+}
+.footer-bottom-menu ul li a {
+  font-size: 11px;
+}
+
+
+/* ===================================
+    Start Home Two Css
+====================================== */
+.boxed {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+}
+
+.about-serction.style-2 {
+  padding: 100px 0 100px;
+}
+.about-serction.style-2 .about-thumb img {
+  width: 100%;
+  height: 600px;
+}
+.about_right_side {
+  margin-left: 0;
+}
+.about-serction.style-2 .about-thumb.right_side {
+  margin-top: 0;
+}
+.about-counter-single-box {
+  padding: 30px 43px 28px;
+}
+
+
+.service-section.style-2 {
+  padding: 90px 0 70px;
+}
+.team-section.style-2 {
+  padding: 90px 0 31px;
+}
+.about-serction.style-2 .about-thumb.right_side img {
+  width: 100%;
+  height: 400px;
+}
+.marquee-section.style-2 {
+  padding: 25px 0 90px;
+}
+
+
+.testimonial-section.style-2 {
+  padding: 88px 0 100px;
+}
+.testi_main_bx {
+  margin-left: 0;
+}
+.testimonal-thumb {
+  display: none;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 0;
+}
+
+.pricing-section {
+  padding: 87px 0 75px;
+}
+.pricing-single-item .header-button a {
+  padding: 11px 75px;
+}
+.service-section.style-3 {
+  padding: 90px 20px 70px;
+}
+.service-contents h3 {
+  font-size: 18px;
+}
+.service-contents {
+  padding: 0 8px 0;
+}
+.single-service-box.bx-3 .service-thumb {
+  height: inherit;
+}
+
+
+
+
+  /******************************
+  <--Inner Page Section-->  
+  ********************************/
+  .breatcome-section {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  /* About Section */
+  .style-3.about-section .about-thumb img {
+    padding: 0;
+  }
+
+  .style-3.about-section .about-thumb {
+    padding-bottom: 30px;
+  }
+  /* Service Inner Page */
+
+  .single-services-box {
+    padding: 38px 25px 32px;
+  }
+
+  .services-title h3 {
+    font-size: 22px;
+  }
+
+  .services-desc p {
+    font-size: 16px;
+  }
+  /* Details Page  */
+  .mediket-icons {
+    float: inherit;
+    margin-bottom: 30px;
+  }
+
+  /* Error Page */
+  .error-section {
+    padding: 90px 0px 90px;
+  }
+
+  /* Appoinment Section */
+
+  .style-1 .testi-single-box {
+    margin-bottom: 35px;
+  }
+
+
+  .mediket-section.style-2 .blog-title h2 a {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .mediket-thumb img {
+    width: 100%;
+  }
+
+  .style-2.accordion li a span:before {
+    right: -642px;
+  }
+
+  .accordion2 li a span:before {
+    right: -644px;
+  }
+
+  /* Project Section inner Page */
+
+  .project-content {
+    padding: 25px 22px 10px;
+  }
+
+  .project-content h2 {
+    font-size: 20px;
+  }
+
+  .project-icon a {
+    top: 20px;
+  }
+
+  /* Testimonial inner Page */
+
+  .upp.style-2 .testi-bg .testi-single-box {
+    padding: 5px 25px 40px;
+  }
+
+  .upp.style-2 .testi-bg .user-info {
+    padding: 0;
+    margin: 30px 12px 0 0;
+  }
+
+  .upp.style-2 .user-name h4 {
+    font-size: 18px;
+  }
+
+  .upp.style-2 .testi-desc p {
+    font-size: 16px;
+  }
+
+  .upp.style-2 .user-info {
+    padding: 25px 15px 25px 1px;
+    margin: 0px 10px 0 0;
+  }
+
+  .people-pic img {
+    margin-right: 0;
+    width: 62%;
+  }
+
+  .style-2 .testi-quote2 {
+    right: 20px;
+    bottom: 39px;
+  }
+
+  .testi-quote2 img {
+    width: 74%;
+  }
+
+  .upp.style-2 .user-name h6 {
+    font-size: 15px;
+  }
+  .team-details-area {
+    padding: 100px 0 100px;
+}
+.style-2.contact-with-mediket {
+  top: 0;
+}
+.blog-single-box.blog_lists .blog-content {
+  padding: 29px 0 20px;
+}
+.blog-single-box.blog_lists {
+  display: block;
+}
+.contact-service-box:before {
+  display: none;
+}
+.service-section.style-3 .mediket-section-title.home-2 {
+  padding-left: 0;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+/* small mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .sticky {
+    position: absolute !important;
+  }
+  .topber_area {
+    display: none;
+  }
+  .meedy_nav_manu {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 700px;
+}
+
+  .hero-content h1 {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+  .hero-thumb {
+    display: none;
+  }
+
+  .hero-socail-icon {
+    display: none;
+  }
+  .hero-btm-boxs:before {
+    right: 39%;
+  }
+
+  .mediket-section-title h1 {
+    font-size: 26px;
+}
+
+.service-section {
+  padding: 90px 0 70px;
+}
+
+.why-choose-us-serction {
+  padding: 90px 0 100px;
+}
+.contact-with-mediket {
+  top: 0;
+}
+.case_item_left_side {
+  padding: 0;
+  margin-bottom: 30px;
+}
+.case_list .owl-nav {
+  display: none;
+}
+.case_study_sextion {
+  background: #041c33;
+  padding: 100px 25px 90px 25px;
+}
+.case_study_sextion .counter-single-box {
+  display: none;
+}
+.team-section {
+  padding: 90px 0 70px;
+}
+.team-section .text-right {
+  margin-top: 40px;
+  text-align: left !important;
+}
+.subscribe-title h1 {
+  font-size: 25px;
+}
+.subscribe_right_side {
+  margin: 21px 0 0;
+}
+.appoinment-section {
+  padding: 100px 48px 100px;
+}
+.contact-form-box {
+  padding: 67px 30px 84px;
+  margin-top: 30px;
+}
+
+.testimonial-section {
+  padding: 100px 0 95px;
+}
+.testi-thumb {
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.blog-section {
+  padding: 90px 0 60px;
+}
+.mediket-btn.text-right {
+  text-align: left !important;
+  margin: 25px 0 0;
+}
+.brand-section {
+  padding: 0 0 95px;
+}
+.footer_title h2 {
+  font-size: 17px;
+}
+
+.footer-bottom-menu.text-right {
+  text-align: left !important;
+}
+.footer-section:before {
+  bottom: 112px;
+}
+.footer-thumb1 {
+  bottom: 113px;
+  right: 9px;
+}
+
+
+
+/* ================================
+Start Home Two 
+=================================== */
+
+.about-serction.style-2 {
+  padding: 100px 0 100px;
+}
+.about-serction.style-2 .about_right_side {
+  margin-left: 0;
+}
+.about-serction.style-2 .about-thumb.right_side {
+  margin-top: 19px;
+  margin-left: 0;
+}
+.about-thumb img {
+  width: 100%;
+}
+.about-serction.style-2 .mediket-section-title.home-2 h1 {
+  font-size: 29px;
+  line-height: 46px;
+}
+.style-2.about-serction .mediket-section-title p {
+  width: 99%;
+}
+
+.service-section.style-2 {
+  padding: 87px 14px 70px;
+}
+.team-section.style-2 {
+  padding: 90px 0 25px;
+}
+.testimonial-section.style-2 {
+  padding: 87px 0 100px;
+}
+.testimonal-thumb {
+  display: none;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 0;
+}
+.testi_main_bx {
+  margin-left: 0;
+}
+.boxed {
+  width: calc(100% - 45px);
+  margin: 0 26px;
+}
+.marquee-section.style-2 {
+  padding: 25px 0 96px;
+}
+.pricing-section {
+  padding: 90px 0 70px;
+}
+.service-section.style-3 {
+  padding: 90px 20px 70px;
+}
+
+
+
+
+
+
+
+  /******************************
+  <--Inner Page Section-->  
+  ********************************/
+  .breatcome-section {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  .breatcome-content h1 {
+    font-size: 50px;
+  }
+
+  /* About Section */
+  .style-3.about-section .about-thumb img {
+    padding: 0;
+  }
+
+  .style-3.about-section .about-thumb {
+    padding-bottom: 30px;
+  }
+
+  .style-3 .counter-right-side {
+    width: auto;
+  }
+
+  /* Details Page  */
+
+  
+
+  /* Error Page */
+  .error-section {
+    padding: 90px 0px 90px;
+  }
+
+  .error-content h1 {
+    font-size: 160px;
+    width: 460px;
+    height: 259px;
+  }
+
+  /* Appoinment Section */
+
+  .style-1 .testi-single-box {
+    margin-bottom: 35px;
+  }
+
+  .mediket-thumb img {
+    width: 100%;
+  }
+
+  iframe {
+    width: 600px;
+  }
+
+  /* Testimonial inner Page */
+
+  .upp.style-2 .testi-single-box {
+    padding: 58px 35px 38px;
+  }
+
+  .upp.style-2 .testi-bg .user-info {
+    padding: 0;
+    margin: 30px 12px 0 0;
+  }
+
+  .upp.style-2 .user-info {
+    padding: 25px 15px 25px 1px;
+    margin: 0px 10px 0 0;
+  }
+
+  .upp.style-2 .user-name h4 {
+    font-size: 20px;
+  }
+
+  .people-pic img {
+    margin-right: 0;
+    width: 62%;
+  }
+
+  .upp.style-2 .testi-desc p {
+    font-size: 18px;
+  }
+  .team-details-area {
+    padding: 100px 0 100px;
+}
+.style-2.contact-with-mediket {
+  top: 0;
+}
+.faq-section .tab_container {
+  padding: 5px 0 60px;
+}
+.blog-single-box.blog_lists {
+  display: block;
+}
+.blog-details-comment.reply {
+  margin-left: 0;
+}
+.comment-bx {
+  padding: 47px 30px 60px;
+}
+.blog-details-thumb {
+  margin-bottom: 30px;
+}
+p.desc-style1 {
+  margin-right: 0;
+}
+.contact-service-box:before {
+  display: none;
+}
+.footer-bottom-menu ul li {
+  margin-left: 0;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+.service-section.style-3 .mediket-section-title.home-2 {
+  padding-left: 0;
+}
+.mediket-section-title.home-2 h1 {
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+  /*  */
+}
+
+
+
+/* small mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+  
+  .sticky {
+    position: absolute !important;
+  }
+  .topber_area {
+    display: none;
+  }
+  .meedy_nav_manu {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 700px;
+}
+
+  .hero-content h1 {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+  .hero-thumb {
+    display: none;
+  }
+
+  .hero-socail-icon {
+    display: none;
+  }
+  .hero-btm-boxs:before {
+    right: 39%;
+  }
+
+  .mediket-section-title h1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+.hero-btm-boxs {
+  gap: 29px;
+}
+.mediket-hero-content h4 {
+  font-size: 14px;
+}
+
+.about-thumb {
+  margin-left: 0;
+}
+
+.about-thumb img {
+  width: 100%;
+}
+.about-img img {
+  width: 100%;
+}
+.single-service-box {
+  padding: 21px 15px 22px;
+}
+.service-content h3 {
+  font-size: 20px;
+}
+.service-icon {
+  right: 26px;
+  top: 18px;;
+}
+.single_service_inner {
+  gap: 20px;
+}
+.service-section {
+  padding: 90px 0 70px;
+}
+.service-thumb img {
+  width: inherit;
+}
+.why-choose-us-serction {
+  padding: 90px 0 100px;
+}
+.contact-with-mediket {
+  top: 0;
+}
+.case_item_left_side {
+  padding: 0;
+}
+.case_list .owl-nav {
+  display: none;
+}
+.case_study_sextion {
+  background: #041c33;
+  padding: 100px 25px 90px 25px;
+}
+.case_study_sextion .counter-single-box {
+  display: none;
+}
+.team-section {
+  padding: 90px 0 70px;
+}
+.team-section .text-right {
+  margin-top: 40px;
+  text-align: left !important;
+}
+.subscribe-title h1 {
+  font-size: 21px;
+}
+.subscribe_right_side {
+  margin: 21px 0 0;
+}
+.mediket-subscribe .mediket-button a {
+  display: none;
+}
+.appoinment-section {
+  padding: 100px 25px 100px;
+}
+.contact-form-box {
+  padding: 67px 30px 84px;
+  margin-top: 30px;
+}
+
+.testimonial-section {
+  padding: 100px 0 95px;
+}
+.testi-thumb {
+  bottom: 0;
+  margin-bottom: 30px;
+}
+.testi-shp {
+  display: none;
+}
+.blog-section {
+  padding: 90px 0 60px;
+}
+.mediket-btn.text-right {
+  text-align: left !important;
+  margin: 25px 0 0;
+}
+.brand-section {
+  padding: 0 0 95px;
+}
+.footer_title h2 {
+  font-size: 17px;
+}
+
+.footer-bottom-menu.text-right {
+  text-align: left !important;
+}
+.footer-section:before {
+  bottom: 112px;
+}
+.footer-thumb1 {
+  bottom: 113px;
+  right: 9px;
+}
+
+
+/* ================================
+Start Home Two 
+=================================== */
+
+
+.hero-content.style-two h1 {
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.about-serction.style-2 {
+  padding: 100px 0 100px;
+}
+.about-serction.style-2 .about_right_side {
+  margin-left: 0;
+}
+.about-serction.style-2 .about-thumb.right_side {
+  margin-top: 19px;
+  margin-left: 0;
+}
+.about-thumb img {
+  width: 100%;
+}
+.about-serction.style-2 .mediket-section-title.home-2 h1 {
+  font-size: 25px;
+  line-height: 41px;
+}
+.style-2.about-serction .mediket-section-title p {
+  width: 99%;
+}
+.mediket-section-title.home-2 h1 {
+  font-size: 30px;
+}
+.service-section.style-2 {
+  padding: 87px 14px 70px;
+}
+.team-section.style-2 {
+  padding: 90px 0 25px;
+}
+.testimonial-section.style-2 {
+  padding: 87px 0 100px;
+}
+.testimonal-thumb {
+  display: none;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 0;
+}
+.testi_main_bx {
+  margin-left: 0;
+}
+.boxed {
+  width: calc(100% - 0px);
+  margin: 0 0;
+}
+.marquee-section.style-2 {
+  padding: 25px 0 96px;
+}
+.pricing-section {
+  padding: 90px 0 70px;
+}
+.pricing-section .mediket-section-title h1 {
+  font-size: 22px;
+}
+.service-section.style-3 {
+  padding: 90px 20px 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /******************************
+  <--Inner Page Section-->  
+  ********************************/
+  .breatcome-section {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  .breatcome-content h1 {
+    font-size: 42px;
+  }
+
+  /* service section */
+  .service-section.style-4 .single-service-box .service-thumb img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+  .service-section.style-4 .single-service-box .single_service_inner {
+    display: block;
+}
+.service-section.style-4 .single-service-box .service-icon {
+  right: 34px;
+  top: 37px;
+}
+
+  /* About Section */
+  .style-3.about-section .about-thumb img {
+    padding: 0;
+  }
+
+  .style-3.about-section .about-thumb {
+    padding-bottom: 30px;
+  }
+
+  .style-3 .counter-right-side {
+    width: auto;
+  }
+
+  /* Testimonial */
+  .style-2 .testi-single-box {
+    padding: 35px 30px 20px;
+  }
+
+  .style-2 .testi-quote2 {
+    right: 12px;
+  }
+
+  .style-2 .testi-quote2 img {
+    width: 78%;
+  }
+
+  .testi-thumb img {
+    width: 100%;
+  }
+
+  /* Details Page  */
+
+  .mediket-title h2 {
+    font-size: 25px;
+  }
+
+
+  .accordion li a {
+    padding: 16px 53px 16px 20px;
+  }
+
+  .accordion li a span {
+    font-size: 18px;
+    padding: 0 7px 0 0px;
+  }
+
+  /* Error Page */
+  .error-section {
+    padding: 90px 0px 90px;
+  }
+
+  .error-content h1 {
+    font-size: 112px;
+    width: 370px;
+    height: 223px;
+    line-height: 220px;
+  }
+
+  /* Appoinment Section */
+
+  .style-1 .testi-single-box {
+    margin-bottom: 35px;
+  }
+
+  .mediket-thumb img {
+    width: 100%;
+  }
+
+  iframe {
+    width: 480px;
+  }
+
+  .accordion2 li a {
+    font-size: 18px;
+  }
+
+  /* Testimonial inner Page */
+
+  .upp.style-2 .testi-single-box {
+    padding: 58px 35px 38px;
+  }
+
+  .upp.style-2 .testi-bg .user-info {
+    padding: 0;
+    margin: 30px 12px 0 0;
+  }
+
+  .upp.style-2 .user-info {
+    padding: 25px 15px 25px 1px;
+    margin: 0px 10px 0 0;
+  }
+
+  .testimonial-section.style-2.upp .user-name h4 {
+    font-size: 17px;
+  }
+
+  .testimonial-section.style-2.upp .people-pic img {
+    margin-right: 0;
+    width: 62%;
+  }
+
+  .upp.style-2 .user-name h6 {
+    font-size: 15px;
+  }
+
+  .upp.style-2 .testi-desc p {
+    font-size: 18px;
+  }
+
+.blog-icon {
+  padding-right: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+.mediket-blog {
+  padding: 30px 20px 14px;
+}
+.blog-desc p {
+  font-size: 16px;
+}
+.team-details-area {
+  padding: 100px 0 100px;
+}
+.style-2.contact-with-mediket {
+  top: 0;
+}
+.footer_title h2:before {
+  display: none;
+}
+.upp.style-2.accordion li a {
+  font-size: 14px;
+  line-height: 20px;
+}
+.faq-section .tab_container {
+  padding: 0 0 60px;
+}
+.blog-single-box.blog_lists {
+  display: block;
+}
+.blog-social-tags a {
+  padding: 4px 14px;
+  font-size: 14px;
+}
+h3.blog-dtls-title3 {
+  font-size: 25px;
+}
+p.desc-style1 {
+  margin-right: 0;
+  font-size: 15px;
+}
+.blog-details-comment.reply {
+  margin-left: 0;
+}
+.comment-bx {
+  padding: 47px 30px 60px;
+}
+.check_bx.two p {
+  font-size: 13px;
+}
+.blog-details-single-items {
+  padding: 40px 19px 20px 21px;
+}
+.blog-content-text.text-left h2 {
+  font-size: 21px;
+  line-height: 36px;
+}
+.blog-meta span {
+  font-size: 14px;
+}
+p.qouik2 {
+  margin: 21px 0 42px 0;
+}
+.contact-service-box:before {
+  display: none;
+}
+
+.service-section.style-3 .mediket-section-title.home-2 {
+  padding-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+  /*  */
+}
+
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .sticky {
+    position: absolute !important;
+  }
+  .topber_area {
+    display: none;
+  }
+  .meedy_nav_manu {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 700px;
+}
+
+.hero-content h1 {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+  .hero-thumb {
+    display: none;
+  }
+
+  .hero-socail-icon {
+    display: none;
+  }
+  .hero-btm-boxs:before {
+    right: 39%;
+  }
+
+  .mediket-section-title h1 {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .hero-btm-boxs {
+    display: block;
+  }
+.mediket-hero-content h4 {
+  font-size: 14px;
+}
+
+.about-thumb {
+  margin-left: 0;
+}
+
+.about-thumb img {
+  width: 100%;
+}
+.about-img img {
+  width: 100%;
+}
+
+.feature-single-box {
+  padding: 29px 20px 102px;
+}
+.bx-2.feature-single-box {
+  padding: 29px 20px 39px;
+  background: #0495ff;
+}
+.feature-single-box.bx-3 {
+  padding: 29px 20px 40px;
+}
+.call-info_text h5 {
+  font-size: 14px;
+}
+
+
+.single-service-box {
+  padding: 21px 15px 22px;
+}
+.service-thumb {
+  display: none;
+}
+.service-thumb img {
+  width: inherit;
+}
+.service-content h3 {
+  font-size: 20px;
+}
+.service-icon {
+  right: 26px;
+  top: 18px;;
+}
+.single_service_inner {
+  gap: 20px;
+}
+.service-section {
+  padding: 90px 0 70px;
+}
+
+
+.why-choose-us-serction {
+  padding: 90px 0 100px;
+}
+.contact-with-mediket {
+  padding: 48px 20px 42px;
+  top: 0;
+}
+.appoinment_contnet h2 {
+  font-size: 20px;
+}
+.mediket-choose-box {
+  display: block;
+}
+.mediket-choose-icon {
+  margin-bottom: 25px;
+}
+
+
+.case_item_left_side {
+  padding: 0;
+}
+.case_list .owl-nav {
+  display: none;
+}
+.case_study_sextion {
+  background: #041c33;
+  padding: 100px 25px 90px 25px;
+}
+.case_study_sextion .counter-single-box {
+  display: none;
+}
+
+
+.team-section {
+  padding: 90px 0 70px;
+}
+.team-section .text-right {
+  margin-top: 40px;
+  text-align: left !important;
+}
+
+.about-serction {
+  padding: 90px 0 100px;
+}
+.team-thumb img {
+  width: 100%;
+}
+.team-thumb::before {
+  width: 244px;
+  height: 245px;;
+}
+.team-content h2 {
+  font-size: 20px;
+}
+
+
+
+.subscribe-title h1 {
+  font-size: 21px;
+}
+.subscribe_right_side {
+  margin: 21px 0 0;
+}
+.counter-single-box.bx-1 {
+  gap: 12px;
+}
+.mediket-subscribe .mediket-button a {
+  display: none;
+}
+.appoinment-section {
+  padding: 100px 0 100px;
+}
+.contact-form-box {
+  padding: 67px 30px 84px;
+  margin-top: 30px;
+}
+.form-box input {
+  padding: 0 0 0 53px;
+}
+.form-box i {
+  left: 23px;
+}
+.form-box:before {
+  display: none;
+}
+.check_bx p {
+  font-size: 13px;
+}
+button.submit-btn {
+  padding: 12px 21px;
+  font-size: 13px;
+}
+
+
+
+.testimonial-section {
+  padding: 100px 0 95px;
+}
+.testi-thumb {
+  bottom: 0;
+  right: 0;
+  margin-bottom: 30px;
+}
+.testi-thumb img {
+  width: 100%;
+}
+.user-name h4 {
+  font-size: 17px;
+}
+.counter-single-box.bx-2 {
+  display: none;
+}
+.testi-shp {
+  display: none;
+}
+.testi-content {
+  padding: 40px 15px 18px;
+}
+.testi-desc p {
+  font-size: 15px;
+}
+
+
+
+.blog-section {
+  padding: 90px 0 60px;
+}
+.blogs-category ul li {
+  font-size: 11px;
+}
+.blog-title h2 a {
+  font-size: 18px;
+}
+
+.mediket-btn.text-right {
+  text-align: left !important;
+  margin: 25px 0 0;
+}
+.brand-section {
+  padding: 0 0 95px;
+}
+.footer_title h2 {
+  font-size: 17px;
+}
+h4.widget-title {
+  font-size: 19px;
+  padding: 18px 0 22px;
+}
+.footer-bottom-menu.text-right {
+  text-align: left !important;
+}
+.footer-section:before {
+  bottom: 145px;
+}
+.footer-thumb1 {
+ display: none;
+}
+.mediket-company-desc p {
+  font-size: 14px;
+}
+.footer-bottom-menu ul li a {
+  font-size: 9px;
+}
+.footer_title {
+  display: none;
+}
+
+
+
+
+
+/* ================================
+Start Home Two 
+=================================== */
+
+.hero-content.style-two h4 {
+  font-size: 12px;
+}
+.hero-content.style-two h1 {
+  font-size: 18px;
+  line-height: 33px;
+}
+.hero-content.style-two p {
+  font-size: 14px;
+  width: 94%;
+}
+.hero-section.hero_two .mediket-hero-icon {
+  float: inherit;
+}
+
+.about-serction.style-2 {
+  padding: 100px 0 100px;
+}
+.about-serction.style-2 .about_right_side {
+  margin-left: 0;
+}
+.about-serction.style-2 .about-thumb.right_side {
+  margin-top: 19px;
+  margin-left: 0;
+}
+.about-thumb img {
+  width: 100%;
+}
+.about-serction.style-2 .mediket-section-title.home-2 h1 {
+  font-size: 16px;
+  line-height: 32px;
+}
+.style-2.about-serction .mediket-section-title p {
+  width: 99%;
+}
+.mediket-section-title.home-2 h1 {
+  font-size: 19px;
+  line-height: 33px;
+}
+.service-section.style-2 {
+  padding: 87px 14px 70px;
+}
+.team-section.style-2 {
+  padding: 90px 0 25px;
+}
+.testimonial-section.style-2 {
+  padding: 87px 0 100px;
+}
+.testimonal-thumb {
+  display: none;
+}
+.testi-single-box.bx-2 .user-info {
+  display: block;
+}
+.testimonial-section.style-2 .mediket-section-title {
+  margin-left: 0;
+}
+.testi_main_bx {
+  margin-left: 0;
+}
+.testi-single-box.bx-2 .user-name h4 {
+  margin: 14px 0 0;
+  font-size: 17px;
+}
+.boxed {
+  width: calc(100% - 0px);
+  margin: 0 0;
+}
+.marquee-section.style-2 {
+  padding: 25px 0 96px;
+}
+.pricing-section {
+  padding: 90px 0 70px;
+}
+.pricing-section .mediket-section-title h1 {
+  font-size: 14px;
+}
+.mediket-section-title h4 {
+  font-size: 13px;
+}
+.service-section.style-3 {
+  padding: 90px 0 70px;
+}
+.pricing-single-item {
+  padding: 42px 20px 40px;
+}
+.pricing-single-item .header-button a {
+  padding: 11px 67px;
+}
+.single-service-box.bx-3 .service-thumb {
+  height: inherit;
+  display: block;
+}
+.service-contents h3 {
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /******************************
+  <--Inner Page Section-->  
+  ********************************/
+  .breatcome-section {
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  .breatcome-content h1 {
+    font-size: 30px;
+  }
+
+  /* About Section */
+  .style-3.about-section .about-thumb img {
+    padding: 0;
+  }
+
+  .style-3.about-section .about-thumb {
+    padding-bottom: 30px;
+  }
+
+  .style-3 .counter-right-side {
+    width: auto;
+    text-align: center;
+  }
+
+  .style-3 .odometer-wrapper.counter-box-title h1 {
+    font-size: 30px;
+  }
+
+  .style-3 .odometer-wrapper.counter-box-title {
+    display: inline-block;
+  }
+
+  .mission-vission-single-box {
+    padding: 35px 25px 15px;
+  }
+
+  .m_v-ssion-desc p {
+    font-size: 16px;
+  }
+
+  /* Testimonial */
+  .style-2 .testi-single-box {
+    padding: 35px 30px 20px;
+  }
+
+  .style-2 .testi-quote2 {
+    right: 12px;
+  }
+
+  .style-2 .testi-quote2 img {
+    width: 78%;
+  }
+
+  .style-2 .testi-thumb img {
+    width: 100%;
+  }
+
+  /* Service Inner Page */
+
+  .single-services-box {
+    padding: 38px 25px 32px;
+  }
+
+  .services-title h3 {
+    font-size: 18px;
+  }
+
+  .services-desc p {
+    font-size: 16px;
+  }
+
+  /* Details Page  */
+
+.mediket-title h2 {
+  font-size: 18px;
+}
+
+  .mediket-thumb img {
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .mediket-single-box {
+    padding: 35px 25px 20px;
+  }
+  .mediket-icons {
+    float: inherit;
+    margin-bottom: 30px;
+  }
+
+  .mediket-content h3 {
+    font-size: 17px;
+  }
+
+  .mediket-content p {
+    font-size: 16px;
+  }
+
+  .mediket-blog {
+    padding: 30px 0 14px;
+    display: inherit;
+  }
+  .blog-desc p {
+    font-size: 17px;
+  }
+  .blog-icon {
+    padding-right: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .accordion li a {
+    font-size: 15px;
+    padding: 16px 50px 15px 12px;
+    line-height: 18px;
+}
+
+  .accordion li a span {
+    font-size: 18px;
+    padding: 0 7px 0 0px;
+  }
+
+  .accordion li p {
+    font-size: 15px;
+    padding: 24px 5px 10px 5px;
+  }
+
+  .mediket-category-box {
+    padding: 20px 25px 24px;
+  }
+
+  /* Error Page */
+  .error-service-content {
+    height: 630px;
+  }
+  .error-section {
+    padding: 90px 0px 90px;
+  }
+
+  .error-content h1 {
+    font-size: 72px;
+    width: 220px;
+    height: 169px;
+    line-height: 169px;
+  }
+
+  /* Appoinment Section */
+
+  .style-1 .testi-single-box {
+    margin-bottom: 35px;
+    padding: 60px 30px 60px;
+  }
+
+  
+
+  .mediket-section.style-2 .blog-title h2 a {
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  .mediket-category-box.responsive {
+    padding: 20px 13px 24px 25px;
+    margin-bottom: 20px;
+  }
+
+  .category-content {
+    padding-left: 10px;
+  }
+
+  .post-thumb a img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .category-content h4 a {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .category-content h6 {
+    font-size: 13px;
+  }
+
+  .mediket-thumb img {
+    width: 100%;
+  }
+
+  .post-comment {
+    display: inherit;
+  }
+
+  .post-content {
+    margin: 25px 0 0px 30px;
+  }
+
+  p.posts-reply {
+    font-size: 15px;
+  }
+
+  .post-comment2 {
+    display: inherit;
+    margin-left: 0;
+  }
+
+  .column .breatcome-content h1 {
+    font-size: 26px;
+  }
+
+  .custom-scroll {
+    padding: 0 5px 0 0;
+  }
+
+  iframe {
+    width: 320px;
+  }
+
+  .accordion2 li a {
+    font-size: 16px;
+    padding: 16px 0px 16px 10px;
+  }
+
+  /* Project Section inner Page */
+
+  .project-content {
+    width: 100%;
+  }
+
+  .project-content h2 {
+    font-size: 18px;
+  }
+
+  .project-icon a {
+    top: 20px;
+  }
+
+  .details .breatcome-content h1 {
+    font-size: 27px;
+  }
+
+  .doctor-content h3 {
+    font-size: 13px;
+}
+
+  .team-details {
+    padding: 30px;
+  }
+
+  .team-details-content {
+    padding: 0 0 0 0px;
+  }
+
+  .prossess-ber-plugin span {
+    font-size: 16px;
+  }
+
+  .barfiller .tip {
+    font-size: 16px;
+  }
+
+  .head-title h3 {
+    font-size: 26px;
+  }
+
+  /* Testimonial inner Page */
+
+  .upp.style-2 .testi-single-box {
+    padding: 58px 25px 38px;
+  }
+
+  .upp.style-2 .testi-bg .user-info {
+    padding: 0;
+    margin: 30px 12px 0 0;
+  }
+
+  .upp.style-2 .user-info {
+    padding: 25px 15px 25px 1px;
+    margin: 0px 10px 0 0;
+  }
+
+  .testimonial-section.style-2.upp .user-name h4 {
+    font-size: 17px;
+  }
+
+  .testimonial-section.style-2.upp .people-pic img {
+    margin-right: 0;
+    width: 62%;
+  }
+
+  .upp.style-2 .user-name h6 {
+    font-size: 15px;
+  }
+
+  .upp.style-2 .testi-desc p {
+    font-size: 16px;
+  }
+
+  .upp.style-2 .testi-bg .testi-single-box {
+    padding: 5px 25px 40px;
+  }
+
+  .upp.style-2 .testi-quote2 {
+    right: 3px;
+    bottom: 42px;
+  }
+
+  ul.mediket-service li {
+    padding: 8px 12px 8px;
+    height: 44px;
+  }
+  .form-box select {
+    margin-bottom: 20px;
+  }
+  .team-details-area {
+    padding: 100px 0 100px;
+  }
+  .team-details-title h2 {
+    font-size: 20px;
+  }
+  .team-detail-title h2 {
+    font-size: 29px;
+  }
+  .prossess-ber-plugin {
+    padding: 0;
+  }
+  .style-2.contact-with-mediket {
+    top: 0;
+  }
+  .accordion-content h2 {
+    font-size: 20px;
+  }
+  .faq-section .tab_container {
+    padding: 0 0 60px;
+}
+.upp.style-2.accordion li a {
+  font-size: 16px;
+}
+.blog-single-box.blog_lists {
+  display: block;
+}
+ul.list_category li a {
+  font-size: 10px;
+  padding: 5px 12px;
+}
+.blog-details_itm {
+  padding: 20px 10px 0;
+}
+.blog-content-text.text-left h2 {
+  font-size: 22px;
+  line-height: 33px;
+}
+.blog-meta span.left {
+  padding-left: 0;
+}
+.blog-meta span {
+  padding-left: 6px;
+}
+.blog-meta span:last-child {
+  padding-left: 6px;
+}
+.blog-meta span.left {
+  padding-left: 0;
+}
+.blog-meta span {
+  font-size: 13px;
+}
+.blog-meta span.left:before{
+  display: none;
+}
+p.qouik {
+  margin-right: 0;
+}
+.blog-details-single-items .blog-icon {
+  float: inherit;
+}
+.blog-details-single-items {
+  display: block;
+  padding: 10px 13px 10px;
+}
+h3.blog-dtls-title3 {
+  font-size: 20px;
+}
+p.desc-style1 {
+  margin-right: 0;
+}
+ul.blog-details-list li {
+  margin-bottom: 9px;
+  font-size: 12px;
+}
+.blog-details-thumb {
+  margin-bottom: 30px;
+}
+h3.blog-dtls-title3 {
+  font-size: 17px;
+}
+.blog-social-tags {
+  display: none;
+}
+.details_rcnt .category-content h4 a {
+  font-size: 14px;
+  line-height: 18px;
+}
+.details_rcnt {
+  padding: 25px 21px 1px;
+  margin-top: 20px;
+}
+.comment-bx {
+  padding: 20px 10px 22px;
+}
+.blog-details-comment-thumb {
+  float: inherit;
+  margin-bottom: 10px;
+}
+.blog-details-comment.reply {
+  margin-left: 0;
+}
+.contact-service-box:before {
+  display: none;
+}
+.about_list_item {
+  padding: 24px 0 25px 15px;
+}
+.author-bio h3 {
+  font-size: 14px;
+}
+.about-service-list ul li {
+  font-size: 13px;
+  line-height: 25px;
+}
+.service-section.style-3 .mediket-section-title.home-2 {
+  padding-left: 0;
+}
+.team-single-boxs .team-btn {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+  /*  */
+}
+
+/* ============================================================
+   Oak Specialist Hospital — Service Card Equal Height & Responsive
+   ============================================================ */
+
+/* Force Bootstrap columns to stretch so flex cards can fill height */
+.service-section.style-3.style-4 .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-section.style-3.style-4 .row > [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.service-section.style-3.style-4 .single-service-box {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Large Desktop (1371px - 1600px) */
+@media (min-width: 1371px) and (max-width: 1600px) {
+  .service-section.style-4 {
+    padding: 90px 60px 70px;
+  }
+}
+
+/* Medium Desktop (1200px - 1370px) */
+@media (min-width: 1200px) and (max-width: 1370px) {
+  .service-section.style-4 {
+    padding: 80px 40px 60px;
+  }
+  .service-section.style-3.style-4 .row > [class*="col-"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+/* Tablet-ish (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .service-section.style-4 {
+    padding: 70px 20px 50px;
+    border-radius: 20px;
+  }
+  .service-section.style-3.style-4 .row > [class*="col-"] {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  .single-service-box {
+    padding: 22px 18px;
+  }
+  .service-content h3 {
+    font-size: 17px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-section.style-4 {
+    padding: 60px 20px 40px;
+    border-radius: 16px;
+  }
+  .service-section.style-3.style-4 .row > [class*="col-"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .single-service-box {
+    padding: 20px 16px;
+  }
+  .single_service_inner {
+    gap: 16px;
+  }
+  .service-content h3 {
+    font-size: 16px;
+  }
+  .service-content p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .service-section.style-4 {
+    padding: 50px 16px 30px;
+    border-radius: 12px;
+  }
+  .service-section.style-3.style-4 .row > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .single-service-box {
+    padding: 20px 16px;
+    height: auto !important;
+  }
+  .single_service_inner {
+    gap: 14px;
+  }
+  .service-thumb img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .service-content h3 {
+    font-size: 16px;
+    margin: 0 0 6px;
+  }
+  .service-content p {
+    font-size: 13px;
+    margin: 6px 0 12px;
+  }
+  .service_btn a {
+    padding: 7px 18px;
+    font-size: 12px;
+  }
+}
+

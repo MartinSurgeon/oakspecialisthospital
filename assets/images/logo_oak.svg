@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="oakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#115E59" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Group -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Shield/Circle -->
+    <rect width="60" height="60" rx="16" fill="url(#oakGrad)" />
+    
+    <!-- Stylized Oak Leaf with Negative Space Cross -->
+    <!-- Leaf shape -->
+    <path d="M30 12 C38 20 46 22 46 36 C46 45 38 48 30 48 C22 48 14 45 14 36 C14 22 22 20 30 12 Z" fill="#FFFFFF" opacity="0.15" />
+    
+    <!-- Oak Tree silhouette that forms a cross in its trunk/branches -->
+    <!-- Tree canopy circles -->
+    <circle cx="30" cy="24" r="10" fill="#FFFFFF" />
+    <circle cx="22" cy="30" r="8" fill="#FFFFFF" />
+    <circle cx="38" cy="30" r="8" fill="#FFFFFF" />
+    <circle cx="30" cy="32" r="9" fill="#FFFFFF" />
+    
+    <!-- Medical Cross cut-out in center -->
+    <path d="M27 28 H33 V34 H27 Z M24 31 H36 V31 Z" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" />
+    <!-- Trunk -->
+    <path d="M30 38 L30 48 M27 48 H33" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  </g>
+  
+  <!-- Typography -->
+  <text x="85" y="38" font-family="'ClashDisplay-Variable', 'Arial Black', sans-serif" font-size="26" font-weight="700" fill="#041C33" letter-spacing="1">OAK</text>
+  <text x="85" y="56" font-family="'Open Sans', sans-serif" font-size="10" font-weight="600" fill="#0D9488" letter-spacing="3.5">SPECIALIST HOSPITAL</text>
+</svg>
