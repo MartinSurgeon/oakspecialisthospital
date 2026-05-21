@@ -1100,7 +1100,7 @@ span.mddle-pd {
 <!-- ============================================================== -->*/
 
 .about-serction {
-  padding: 110px 0 110px;
+  padding: 75px 0 75px;
   position: relative;
   z-index: 1;
   background: url(../images/main-home/about_bg.jpg);
@@ -1404,7 +1404,7 @@ p.about_qute:before {
 /* Service Section */
 
 .service-section {
-  padding: 75px 0 98px;
+  padding: 75px 0 75px;
   background: #041c33;
 }
 
@@ -1491,7 +1491,7 @@ p.about_qute:before {
 <!-- ============================================================== -->*/
 
 .why-choose-us-serction {
-  padding: 120px 0 70px;
+  padding: 80px 0 70px;
   background: url(../images/main-home/why-choose-us-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1798,7 +1798,7 @@ p.about_qute:before {
 <!-- Start mediket Team Section -->
 <!-- ============================================================== -->*/
 .team-section {
-  padding: 108px 0 90px;
+  padding: 75px 0 75px;
   position: relative;
   background: url(../images/main-home/team_bg.jpg);
   background-repeat: no-repeat;
@@ -2107,7 +2107,7 @@ span.wood-animation img {
 <!-- ============================================================== -->*/
 
 .appoinment-section {
-  padding: 120px 48px 120px;
+  padding: 80px 48px 80px;
   position: relative;
   background: #041C34;
 }
@@ -2278,7 +2278,7 @@ button.submit-btn:hover:after {
 <!-- Start Testimonial Section -->
 <!-- ============================================================== -->*/
 .testimonial-section {
-  padding: 110px 0 10px;
+  padding: 75px 0 10px;
   background: url(../images/main-home/testi-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2507,7 +2507,7 @@ ul.testi-rating li {
 <!-- ============================================================== -->*/
 
 .blog-section {
-  padding: 110px 0 80px;
+  padding: 75px 0 70px;
   background: #EEF7FF;
 }
 
@@ -2636,7 +2636,7 @@ ul.testi-rating li {
 <!-- ============================================================== -->*/
 
 .brand-section {
-  padding: 0 0 110px;
+  padding: 0 0 70px;
   text-align: center;
   background: #EEF7FF;
 }
