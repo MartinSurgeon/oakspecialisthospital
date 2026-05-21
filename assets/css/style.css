@@ -3158,7 +3158,9 @@ h2.service_number {
   -webkit-text-stroke-color: #ffffffde;
   color: transparent;
   -webkit-mask-image: linear-gradient(-75deg, rgb(255 255 255 / 15%) 50%, #f4f4f43d 50%, rgba(255, 255, 255, 0.15) 70%);
+  mask-image: linear-gradient(-75deg, rgb(255 255 255 / 15%) 50%, #f4f4f43d 50%, rgba(255, 255, 255, 0.15) 70%);
   -webkit-mask-size: 200%;
+  mask-size: 200%;
   animation: shine 3s infinite;
   font-family: "Open Sans";
   position: absolute;
@@ -5129,6 +5131,7 @@ p.mdy-pd {
 .accordion a.active:after {
   transform: rotate(0deg);
   -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background: #fff;
 }
 
@@ -5282,6 +5285,7 @@ p.mdy-pd {
 .accordion2 a.active:after {
   transform: rotate(0deg);
   -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background: #fff;
 }
 
@@ -5461,7 +5465,6 @@ ul.list_category li a {
 
 .download-btn a span i {
   float: right;
-  display: inline-block;
   font-size: 17px;
   padding: 0;
   transition: 0.5s;
@@ -6392,6 +6395,7 @@ ul.social-box li a:hover {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
   height: 70px;
   line-height: 70px;
   text-align: center;
@@ -6472,6 +6476,7 @@ ul.social-box li a:hover {
   padding: 0;
   cursor: pointer;
   -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
   border: none;
 }
 .search-popup .form-group input[type="submit"]:hover,
@@ -6522,7 +6527,7 @@ span.flaticon-multiply i {
 
 /* Spin Animation */
 
-@keyframes "spin" {
+@keyframes spin {
   0% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -6548,7 +6553,7 @@ span.flaticon-multiply i {
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes "spin" {
+@-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -6558,7 +6563,7 @@ span.flaticon-multiply i {
     transform: rotate(0deg);
   }
 }
-@-ms-keyframes "spin" {
+@-ms-keyframes spin {
   0% {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -6568,7 +6573,7 @@ span.flaticon-multiply i {
     transform: rotate(0deg);
   }
 }
-@-o-keyframes "spin" {
+@-o-keyframes spin {
   0% {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -7209,4 +7214,36 @@ to {
   height: 540px !important;
   object-fit: cover !important;
 }
+
+/* 6. Service Cards Thumbnail Alignment */
+@media (min-width: 768px) {
+  .single_service_inner .service-thumb {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+    width: 45% !important;
+  }
+}
+
+/* 7. Hero Section Spacing & Height Synchronization */
+@media (min-width: 992px) {
+  .hero-section {
+    height: 800px !important;
+  }
+  .hero-section .row {
+    align-items: stretch !important;
+  }
+  .hero-content {
+    margin-top: 0 !important;
+  }
+  .hero-thumb {
+    height: 100% !important;
+    margin-top: 0 !important;
+  }
+  .hero-thumb > img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+
 
