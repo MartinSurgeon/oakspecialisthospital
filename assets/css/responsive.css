@@ -717,7 +717,13 @@ h3.pricing-plan2 {
   /* Hero Section */
 
   .hero-section {
-    height: 680px;
+    height: auto !important;
+    padding: 130px 0 60px !important;
+  }
+
+  .hero-content {
+    margin-top: 0 !important;
+    margin-bottom: 40px !important;
   }
 
   .hero-content h1 {
@@ -1102,8 +1108,19 @@ h3.pricing-plan2 {
 
   /* Hero Section */
   .hero-section {
-    height: 550px;
-}
+    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: auto !important;
+    padding: 130px 0 80px !important;
+  }
+
+  .hero-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+  }
 
   .hero-content h1 {
     font-size: 32px !important;
@@ -1429,8 +1446,19 @@ p.desc-style1 {
 
   /* Hero Section */
   .hero-section {
-    height: 550px;
-}
+    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: auto !important;
+    padding: 130px 0 80px !important;
+  }
+
+  .hero-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+  }
 
   .hero-content h1 {
     font-size: 30px !important;
@@ -1894,8 +1922,19 @@ p.qouik2 {
 
   /* Hero Section */
   .hero-section {
-    height: 500px;
-}
+    background: linear-gradient(rgba(4, 28, 51, 0.5), rgba(4, 28, 51, 0.5)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: auto !important;
+    padding: 130px 0 85px !important;
+  }
+
+  .hero-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+  }
 
   .hero-content h1 {
     font-size: 26px !important;
@@ -2856,6 +2895,9 @@ h3.blog-dtls-title3 {
   .hero-content h4, 
   .hero-content p {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  }
+  .hero-content h4 {
+    color: #ffffff !important;
   }
 }
 
