@@ -3030,11 +3030,44 @@ Start  Home Two Csss
   padding: 120px 0 120px;
   background: #ffff;
 }
-.about-thumb.style-2 {
-  margin-left: 0;
+.about-image-collage {
+  position: relative;
+  padding-bottom: 50px;
+  padding-right: 30px;
+}
+.collage-main-img {
+  width: 85%;
+}
+.collage-main-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15);
+}
+.collage-sub-img {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.collage-sub-img img {
+  width: 100%;
+  border: 8px solid #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(4, 28, 51, 0.2);
+  transition: transform 0.3s ease;
+}
+.collage-sub-img img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 991px) {
+  .about-image-collage {
+    margin-bottom: 50px;
+    padding-right: 20px;
+  }
 }
 .about_right_side {
-  margin-left: -49px;
+  margin-left: 0;
 }
 .style-2.about-serction .mediket-section-title p {
   padding: 21px 0 0;
@@ -3042,7 +3075,7 @@ Start  Home Two Csss
   line-height: 27px;
   color: #041c33a8;
   font-weight: 400;
-  width: 59%;
+  width: 100%;
 }
 .style-2.about-serction .mediket-btn a {
   margin-top: 26px;
@@ -3092,7 +3125,7 @@ Start  Home Two Csss
   font-weight: 400;
 }
 .about-thumb.right_side {
-  margin-top: -190px;
+  margin-top: 0;
 }
 
 /* ===============================

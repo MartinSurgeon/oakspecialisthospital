@@ -492,10 +492,10 @@ Start Home Two
   padding: 38px 15px 35px;
 }
 .style-2.about-serction .mediket-section-title p {
-  width: 71%;
+  width: 100%;
 }
 .about-thumb.right_side {
-  margin-top: -80px;
+  margin-top: 0;
 }
 .testimonal-thumb {
   left: 19px;
