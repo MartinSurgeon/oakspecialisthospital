@@ -7575,3 +7575,36 @@ to {
     max-height: 340px;
   }
 }
+
+/* ==========================================================================
+   Service Cards Layout Fixes (Prevent Text Overflow & Icon Overlap)
+   ========================================================================== */
+.single-service-box {
+  padding: 25px 20px !important;
+}
+@media (min-width: 768px) {
+  .single_service_inner .service-thumb {
+    flex: 0 0 38% !important;
+    max-width: 38% !important;
+    width: 38% !important;
+  }
+  .single_service_inner .service-content {
+    padding-left: 15px !important;
+  }
+}
+.single_service_inner .service-content {
+  min-width: 0;
+}
+.single_service_inner .service-content h3 {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  font-size: clamp(18px, 1.2vw, 22px) !important;
+  padding-right: 5px !important;
+}
+.single-service-box .service-icon {
+  left: 15px !important;
+  right: auto !important;
+  top: 15px !important;
+  transform: scale(0.8) !important;
+  z-index: 10 !important;
+}
