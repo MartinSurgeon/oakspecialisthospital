@@ -3032,15 +3032,19 @@ Start  Home Two Csss
 }
 .about-image-collage {
   position: relative;
-  padding-bottom: 50px;
-  padding-right: 30px;
+  height: 100%;
+  width: 100%;
 }
 .collage-main-img {
-  width: 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .collage-main-img img {
   width: 100%;
-  height: 380px;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15);
@@ -3067,11 +3071,18 @@ Start  Home Two Csss
 @media (max-width: 991px) {
   .about-image-collage {
     margin-bottom: 50px;
-    padding-right: 20px;
+    padding-right: 0;
+    height: auto;
+  }
+  .collage-main-img {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
   .collage-main-img img,
   .collage-sub-img img {
-    height: 280px;
+    height: 320px;
+    min-height: auto;
   }
 }
 .about_right_side {
@@ -7304,6 +7315,50 @@ to {
 
 .meedy_nav_manu.header-light:not(.sticky) .meedy_menu > ul > li > a:hover {
   color: #006d87 !important; /* Teal-blue (theme secondary accent) */
+}
+
+/* ==========================================================================
+   Why Choose Us Section - Full Height Blue Card Alignment
+   ========================================================================== */
+.why-choose-us-serction .row.about-bg {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.why-choose-us-serction .row.about-bg > div[class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.why-choose-us-serction .contact-with-mediket {
+  top: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 50px 34px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.why-choose-us-serction .contact-with-mediket .appoinment_contnet p {
+  margin: 15px 0 30px !important;
+}
+
+/* Ensure natural responsive stack on smaller viewports */
+@media (max-width: 991px) {
+  .why-choose-us-serction .row.about-bg {
+    align-items: initial !important;
+  }
+  .why-choose-us-serction .row.about-bg > div[class*="col-"] {
+    display: block !important;
+  }
+  .why-choose-us-serction .contact-with-mediket {
+    height: auto !important;
+    margin-top: 30px !important;
+    padding: 40px 20px !important;
+  }
 }
 
 
