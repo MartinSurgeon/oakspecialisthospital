@@ -1108,7 +1108,7 @@ h3.pricing-plan2 {
 
   /* Hero Section */
   .hero-section {
-    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.png) !important;
     background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -1447,7 +1447,7 @@ p.desc-style1 {
 
   /* Hero Section */
   .hero-section {
-    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.png) !important;
     background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -1924,7 +1924,7 @@ p.qouik2 {
 
   /* Hero Section */
   .hero-section {
-    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.jpeg) !important;
+    background-image: linear-gradient(rgba(4, 28, 51, 0.72), rgba(4, 28, 51, 0.72)), url(../images/assets-oakspecialisthospital/JPG/oakfrontview.png) !important;
     background-color: #041c33 !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -2887,8 +2887,8 @@ h3.blog-dtls-title3 {
     display: none !important;
   }
 
-  /* ---- Fixed mobile header ---- */
-  .mobile-menu-area.sticky {
+  /* ---- Fixed mobile header — always fixed, no JS class needed ---- */
+  .mobile-menu-area {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
