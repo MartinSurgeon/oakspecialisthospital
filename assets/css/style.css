@@ -7095,26 +7095,19 @@ to {
   z-index: 201;
   top: 50%;
   left: 50%;
+  width: 100px;
+  height: 100px;
   margin: -50px 0 0 -50px;
   transition: all 1s 1s ease;
-  width: 48px;
-  height: 48px;
+  background-image: url(../images/loader.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .loader:before,
 .loader:after {
-  content: "";
-  display: block;
-  border: 32px solid transparent;
-  border-top-color: #00ffff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  animation: weld-rotate 2s infinite ease-in;
-}
-.loader:before {
-  border-color: transparent transparent transparent var(--secondary-color);
-  animation-delay: 0.5s;
+  display: none !important;
 }
 @keyframes weld-rotate {
   0%,
