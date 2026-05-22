@@ -2887,7 +2887,7 @@ h3.blog-dtls-title3 {
     display: none !important;
   }
 
-  /* ---- Fixed mobile header — always fixed, no JS class needed ---- */
+  /* ---- Fixed mobile header ---- */
   .mobile-menu-area {
     position: fixed !important;
     top: 0 !important;
@@ -2896,27 +2896,6 @@ h3.blog-dtls-title3 {
     z-index: 99999 !important;
     background-color: #041c33 !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4) !important;
-  }
-
-  /* Mobile header bar: logo left, meanmenu toggle right */
-  .mobile-header-bar {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 10px 16px !important;
-    min-height: 62px !important;
-  }
-
-  /* Logo */
-  .mobile-logo {
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    z-index: 2 !important;
-  }
-  .mobile-logo img {
-    max-height: 42px !important;
-    width: auto !important;
   }
 
   /* "Book an Appointment" — inside the nav dropdown, full-width styled button */
