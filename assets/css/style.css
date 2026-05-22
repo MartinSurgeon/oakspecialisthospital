@@ -3032,13 +3032,11 @@ Start  Home Two Csss
 }
 .about-image-collage {
   position: relative;
-  height: 100%;
+  height: 600px;
   width: 100%;
 }
 .collage-main-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -3046,6 +3044,7 @@ Start  Home Two Csss
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15);
 }
@@ -3070,18 +3069,18 @@ Start  Home Two Csss
 }
 @media (max-width: 991px) {
   .about-image-collage {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     padding-right: 0;
-    height: auto;
+    height: 340px;
   }
   .collage-main-img {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .collage-main-img img,
   .collage-sub-img img {
-    height: 320px;
+    height: 100%;
     min-height: auto;
   }
 }
@@ -7228,19 +7227,193 @@ to {
 
 .brand-thumb img {
   max-height: 50px !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+}
+
+.hero-thumb > img {
+  width: 100% !important;
+  height: 540px !important;
+  object-fit: cover !important;
+}
+
+/* 6. Service Cards Thumbnail Alignment */
+@media (min-width: 768px) {
+  .single_service_inner .service-thumb {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+    width: 45% !important;
+  }
+}
+
+/* 7. Hero Section Spacing & Height Synchronization */
+@media (min-width: 992px) {
+  .hero-section {
+    height: 800px !important;
+  }
+  .hero-section .container {
+    position: relative;
+    top: 10px;
+  }
+  .hero-section .row {
+    align-items: stretch !important;
+  }
+  .hero-content {
+    margin-top: 0 !important;
+  }
+  .hero-thumb {
+    height: 100% !important;
+    margin-top: 0 !important;
+  }
+  .hero-thumb > img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* ==========================================================================
+   Header Light/White Background Override for Inner Pages Legibility
+   ========================================================================== */
+.meedy_nav_manu.header-light:not(.sticky) {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #f2f6f9 !important;
+}
+
+.meedy_nav_manu.header-light:not(.sticky) .meedy_menu > ul > li > a {
+  color: #091E3E !important; /* Deep navy */
+}
+
+.meedy_nav_manu.header-light:not(.sticky) .meedy_menu > ul > li > a:hover {
+  color: #006d87 !important; /* Teal-blue (theme secondary accent) */
+}
+
+/* ==========================================================================
+   Why Choose Us Section - Full Height Blue Card Alignment
+   ========================================================================== */
+.why-choose-us-serction .row.about-bg {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.why-choose-us-serction .row.about-bg > div[class*="col-"] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.why-choose-us-serction .contact-with-mediket {
+  top: 0 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 50px 34px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.why-choose-us-serction .contact-with-mediket .appoinment_contnet p {
+  margin: 15px 0 30px !important;
+}
+
+/* Ensure natural responsive stack on smaller viewports */
+@media (max-width: 991px) {
+  .why-choose-us-serction .row.about-bg {
+    align-items: initial !important;
+  }
+  .why-choose-us-serction .row.about-bg > div[class*="col-"] {
+    display: block !important;
+  }
+  .why-choose-us-serction .contact-with-mediket {
+    height: auto !important;
+    margin-top: 30px !important;
+.loaded .loader {
+  top: -100%;
+  opacity: 0;
+}
+
+/* Responsive */
+
+@media (min-width: 1300px) and (max-width: 1370px) {
+  .service-section .swiper {
+    height: 530px !important;
+  }
+}
+
+/* large Desktop */
+
+@media (min-width: 1601px) and (max-width: 1770px) {
+  .service-section .swiper {
+    height: 480px !important;
+  }
+}
+
+/* ==========================================================================
+   Oak Specialist Hospital Image Integration & Normalization System
+   ========================================================================== */
+
+/* 1. Services Card Normalization (Ensuring identical height & layout structure) */
+.single-service-box {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.service-thumb {
+  width: 100% !important;
+  height: 230px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  border-radius: 8px !important;
+}
+
+.service-thumb img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease !important;
+}
+
+.single-service-box:hover .service-thumb img {
+  transform: scale(1.08) !important;
+}
+
+/* 2. Logo Alignment & Constraints */
+.logo a img, .main_sticky img, .company-logo a img, .nav-logo img {
+  max-height: 55px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* 3. Featured Vendor Logos Normalization */
+.brand-thumb {
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+
+.brand-thumb img {
+  max-height: 50px !important;
   width: auto !important;
   object-fit: contain !important;
 }
 
 /* 4. About Thumb Normalization */
-.about-thumb {
+.about-thumb:not(.style-2) {
   width: 100% !important;
   height: 480px !important;
   overflow: hidden !important;
   border-radius: 12px !important;
 }
 
-.about-thumb img {
+.about-thumb:not(.style-2) img {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
@@ -7354,6 +7527,51 @@ to {
   }
 }
 
+/* ==========================================================================
+   About Page – Single Image Layout & Fluid Responsive Typography
+   ========================================================================== */
 
+/* Simple about image — matches original theme's about-thumb style-2 approach.
+   Must use !important to override the general .about-thumb { height: 480px !important } rule */
+.about-serction.style-2 .about-thumb.style-2 {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  border-radius: 0 !important;
+  margin-left: 0 !important;
+}
 
+.about-serction.style-2 .about-main-img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 540px;
+  object-fit: cover !important;
+  object-position: top center !important;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15) !important;
+}
 
+/* Fluid responsive typography for headings – prevents cognitive overload & layout bloat */
+.responsive-header {
+  font-size: clamp(28px, 3.5vw, 44px) !important;
+  line-height: clamp(36px, 4.5vw, 54px) !important;
+  font-weight: 700 !important;
+  font-family: 'ClashDisplay-Variable', sans-serif !important;
+  color: #091E3E !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+  letter-spacing: -0.5px !important;
+}
+
+/* Mobile & tablet stack adjustments */
+@media (max-width: 991px) {
+  .about-serction.style-2 .about-thumb.style-2 {
+    margin-bottom: 40px;
+  }
+  .about-serction.style-2 .about-main-img {
+    max-height: 340px;
+  }
+}
