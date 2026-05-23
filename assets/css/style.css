@@ -6635,9 +6635,9 @@ span.flaticon-multiply i {
   }
 }
 
-/*============================
-/* Scroll Up Css 
-==============================*/
+/* ============================
+   Scroll Up Css – COMMENTED OUT
+   ==============================
 
 #progress {
   height: 70px;
@@ -6675,6 +6675,8 @@ span.flaticon-multiply i {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+
+*/
 
 /* Start  Curser pointer CSS */
 

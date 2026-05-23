@@ -49,9 +49,9 @@ cursorScale.forEach((link) => {
   });
 });
 
-// scroll up
+// scroll up – COMMENTED OUT
 
-let scrollPercentage = () => {
+/* let scrollPercentage = () => {
   let scrollProgress = document.getElementById("progress");
   let progressValue = document.getElementById("progress-value");
   let pos = document.documentElement.scrollTop;
@@ -77,5 +77,5 @@ let scrollPercentage = () => {
 };
 
 window.onscroll = scrollPercentage;
-window.onload = scrollPercentage;
+window.onload = scrollPercentage; */
 
