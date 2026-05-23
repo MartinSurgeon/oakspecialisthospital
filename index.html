@@ -605,7 +605,7 @@
               <div class="case_list owl-carousel">
                 <div class="case_study_item">
                   <div class="case_thumb">
-                    <a href="#"><img src="assets/images/main-home/case_img.png" alt=""></a>
+                    <a href="#" title="View Surgery Case Study"><img src="assets/images/main-home/case_img.png" alt="Surgery Case Study"></a>
                     <div class="case_study_content">
                       <span>Surgery</span>
                       <h3><a href="#">Managing Epilepsy</a></h3>
@@ -614,7 +614,7 @@
                 </div>
                 <div class="case_study_item">
                   <div class="case_thumb">
-                    <a href="#"><img src="assets/images/main-home/case_img2.png" alt=""></a>
+                    <a href="#" title="View Neurology Case Study"><img src="assets/images/main-home/case_img2.png" alt="Neurology Case Study"></a>
                     <div class="case_study_content">
                       <span>Nurology</span>
                       <h3><a href="#">Nuro Sergery Threat</a></h3>
@@ -623,7 +623,7 @@
                 </div>
                 <div class="case_study_item">
                   <div class="case_thumb">
-                    <a href="#"><img src="assets/images/main-home/case_img.png" alt=""></a>
+                    <a href="#" title="View Surgery Case Study"><img src="assets/images/main-home/case_img.png" alt="Surgery Case Study"></a>
                     <div class="case_study_content">
                       <span>Surgery</span>
                       <h3><a href="#">Managing Epilepsy</a></h3>
@@ -632,7 +632,7 @@
                 </div>
                 <div class="case_study_item">
                   <div class="case_thumb">
-                    <a href="#"><img src="assets/images/main-home/case_img2.png" alt=""></a>
+                    <a href="#" title="View Neurology Case Study"><img src="assets/images/main-home/case_img2.png" alt="Neurology Case Study"></a>
                     <div class="case_study_content">
                       <span>Nurology</span>
                       <h3><a href="#">Nuro Sergery Threat</a></h3>
@@ -700,10 +700,10 @@
               <h5>Medical Director &amp; IVF Specialist</h5>
               <div class="social-icon">
                 <ul>
-                  <li><a href="team-details.html"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-behance"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="team-details.html" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="team-details.html" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="team-details.html" title="Behance"><i class="fa-brands fa-behance"></i></a></li>
+                  <li><a href="team-details.html" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -719,10 +719,10 @@
               <h5>Senior Obstetrics &amp; Gynaecology Consultant</h5>
               <div class="social-icon">
                 <ul>
-                  <li><a href="team-details.html"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-behance"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="team-details.html" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="team-details.html" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="team-details.html" title="Behance"><i class="fa-brands fa-behance"></i></a></li>
+                  <li><a href="team-details.html" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -738,10 +738,10 @@
               <h5>Consultant Paediatrician</h5>
               <div class="social-icon">
                 <ul>
-                  <li><a href="team-details.html"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-behance"></i></a></li>
-                  <li><a href="team-details.html"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li><a href="team-details.html" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="team-details.html" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="team-details.html" title="Behance"><i class="fa-brands fa-behance"></i></a></li>
+                  <li><a href="team-details.html" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -849,34 +849,42 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-box">
-                    <select id="cars">
-                      <option value="volvo">Doctor Abarar uddin</option>
-                      <option value="saab">Doctor Mariya</option>
-                      <option value="vw">Doctor Sultana</option>
-                      <option value="audi" selected>select Doctor</option>
+                    <select id="index-doctor" name="specialist" title="Select Doctor" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
+                      <option value="" disabled selected>Select Specialist*</option>
+                      <option value="Dr. Osei K. Agyemang">Dr. Osei K. Agyemang (IVF Specialist)</option>
+                      <option value="Dr. Ama Nkrumah">Dr. Ama Nkrumah (Obstetrics & Gynaecology)</option>
+                      <option value="Dr. Emmanuel Ofori">Dr. Emmanuel Ofori (Paediatrics)</option>
+                      <option value="Dr. Abigail Boateng">Dr. Abigail Boateng (Embryology)</option>
+                      <option value="Any Specialist Available">Any Specialist Available</option>
                     </select>
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user-doctor" style="position: absolute; right: 20px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-box">
-                    <select id="cars">
-                      <option value="volvo">Medicine </option>
-                      <option value="saab">Medicine (English)</option>
-                      <option value="vw">Psychology</option>
-                      <option value="audi" selected>Select Treatments</option>
+                    <select id="index-treatment" name="department" title="Select Treatment" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
+                      <option value="" disabled selected>Select Department*</option>
+                      <option value="General/Family Medicine">General/Family Medicine</option>
+                      <option value="Obstetrics/Gynaecology">Obstetrics/Gynaecology</option>
+                      <option value="In Vitro Fertilization">In Vitro Fertilization</option>
+                      <option value="Paediatrics">Paediatrics</option>
+                      <option value="Internal Medicine">Internal Medicine</option>
+                      <option value="Surgery">Surgery</option>
+                      <option value="General Laboratory">General Laboratory</option>
+                      <option value="Pharmacy">Pharmacy</option>
+                      <option value="Ultrasound Scan Services">Ultrasound Scan Services</option>
                     </select>
-                    <i class="fas fa-bookmark"></i>
+                    <i class="fa-solid fa-stethoscope" style="position: absolute; right: 20px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
                 </div>
                 <div class="col-lg-12 col-md-6">
                   <div class="check_bx">
-                    <input type="checkbox">
-                    <p>I agree terms and conditions</p>
+                    <input type="checkbox" id="index-agree" title="I agree to terms and conditions" required="">
+                    <label for="index-agree" style="font-size: 14px; color: #616161; margin-left: 10px; cursor: pointer;">I agree to terms and conditions</label>
                   </div>
-                  <div class="submit-button cursor-scale small">
-                    <button class="submit-btn">
-                      Book Appoinment <i class="flaticon flaticon-right-arrow"></i>
+                  <div class="submit-button cursor-scale small" style="margin-top: 20px;">
+                    <button class="submit-btn" type="submit">
+                      Book Appointment <i class="flaticon flaticon-right-arrow"></i>
                     </button>
                   </div>
                 </div>
@@ -1631,22 +1639,22 @@
             <form>
               <div class="subscribe_form">
                 <input type="email" name="email" placeholder="yourname@domain.com" />
-                <button type="submit" class="submits-btn">
+                <button type="submit" class="submits-btn" title="Subscribe to Newsletter">
                   <i class="flaticon flaticon-right-arrow"></i>
                 </button>
               </div>
             </form>
             <div class="mediket-social-icon cursor-scale small">
-              <a href="#">
+              <a href="#" title="Facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
+              <a href="#" title="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"> </i>
               </a>
-              <a href="#">
+              <a href="#" title="Twitter">
                 <i class="bi bi-twitter"></i>
               </a>
-              <a href="#">
+              <a href="#" title="Pinterest">
                 <i class="fab fa-pinterest-p"></i>
               </a>
             </div>
@@ -1686,14 +1694,14 @@
   <!-- Start Search Popup Area -->
   <!--==================================================-->
   <div class="search-popup">
-    <button class="close-search style-two">
+    <button class="close-search style-two" type="button" title="Close Search">
       <span class="flaticon-multiply"><i class="far fa-times-circle"></i></span>
     </button>
-    <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+    <button class="close-search" type="button" title="Close Search"><i class="fas fa-arrow-up"></i></button>
     <form method="post" action="#">
       <div class="form-group">
         <input type="search" name="search-field" value="" placeholder="Search Here" required="" />
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <button type="submit" title="Submit Search"><i class="fa fa-search"></i></button>
       </div>
     </form>
   </div>
@@ -1709,7 +1717,7 @@
     <div class="xs-sidebar-widget">
       <div class="sidebar-widget-container">
         <div class="widget-heading">
-          <a href="#" class="close-side-widget">
+          <a href="#" class="close-side-widget" title="Close Sidebar">
             <i class="far fa-times-circle"></i>
           </a>
         </div>
@@ -1763,16 +1771,16 @@
               <!-- Social Box -->
               <ul class="social-box">
                 <li class="facebook">
-                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fab fa-facebook-f" title="Facebook"></a>
                 </li>
                 <li class="twitter">
-                  <a href="#" class="fab fa-x-twitter"></a>
+                  <a href="#" class="fab fa-x-twitter" title="Twitter / X"></a>
                 </li>
                 <li class="linkedin">
-                  <a href="#" class="fab fa-linkedin-in"></a>
+                  <a href="#" class="fab fa-linkedin-in" title="LinkedIn"></a>
                 </li>
                 <li class="instagram">
-                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-instagram" title="Instagram"></a>
                 </li>
               </ul>
             </div>

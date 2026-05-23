@@ -7379,6 +7379,10 @@ to {
   box-shadow: 0 15px 35px rgba(4, 28, 51, 0.15) !important;
 }
 
+.about-serction.style-2 .about_right_side {
+  margin-left: 0 !important;
+}
+
 /* Fluid responsive typography for headings – prevents cognitive overload & layout bloat */
 .responsive-header {
   font-size: clamp(28px, 3.5vw, 44px) !important;
@@ -7433,3 +7437,46 @@ to {
   transform: scale(0.8) !important;
   z-index: 10 !important;
 }
+
+/* ==========================================================================
+   Case Study Carousel – Nav Arrow Position Fix
+   The original position (right: -23%, bottom: 23%) placed arrows between
+   columns next to the counter card. Now we reposition them cleanly below
+   the carousel images, inside the dark section.
+   ========================================================================== */
+.case_study_sextion.style-2 .case_list .owl-nav {
+  position: absolute !important;
+  right: auto !important;
+  left: 0 !important;
+  bottom: -75px !important;
+  display: flex !important;
+  gap: 12px !important;
+}
+
+.case_study_sextion.style-2 .case_list .owl-prev i,
+.case_study_sextion.style-2 .case_list .owl-next i {
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  display: inline-block !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: background 0.35s ease, border-color 0.35s ease !important;
+}
+
+.case_study_sextion.style-2 .case_list .owl-prev i:hover,
+.case_study_sextion.style-2 .case_list .owl-next i:hover {
+  background: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+/* Ensure the case_item_left_side has enough bottom padding for the nav buttons */
+.case_study_sextion.style-2 .case_item_left_side {
+  padding-bottom: 90px !important;
+}
+

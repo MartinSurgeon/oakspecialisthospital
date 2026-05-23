@@ -240,6 +240,11 @@
   var swiper = new Swiper(".brand", {
     spaceBetween: 30,
     freeMode: true,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
