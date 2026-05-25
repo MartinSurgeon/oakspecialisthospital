@@ -333,6 +333,31 @@ function renderStep(stepNumber) {
 
 // 6. Dynamic Google Calendar Integration
 function generateCalendarSchedule() {
+  const formContainer = document.getElementById('booking-details-form-container');
+  const calendarWrapper = document.getElementById('calendar-scheduling-interactive-wrapper');
+  const editBtn = document.getElementById('edit-client-details-btn');
+  
+  // Set minimum date to today
+  const dateInput = document.getElementById('booking-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  // Toggle form vs calendar based on client details state
+  if (state.clientDetails) {
+    const phoneEl = document.getElementById('client-phone');
+    if (phoneEl) phoneEl.value = state.clientDetails.phone || '';
+    
+    if (formContainer) formContainer.style.display = 'none';
+    if (calendarWrapper) calendarWrapper.style.display = 'block';
+    if (editBtn) editBtn.style.display = 'inline-block';
+  } else {
+    if (formContainer) formContainer.style.display = 'block';
+    if (calendarWrapper) calendarWrapper.style.display = 'none';
+    if (editBtn) editBtn.style.display = 'none';
+  }
+
   const iframeWrapper = document.getElementById('calendar-iframe-wrapper');
   const iframeEl = document.getElementById('calendar-booking-iframe');
   const directLinkBtn = document.getElementById('calendar-direct-link');
@@ -505,8 +530,157 @@ function parseQueryParams() {
 
 // 8. Completed Booking Step 5 Transitions
 window.navigateToStep5 = function() {
-  state.currentStep = 5;
-  renderStep(5);
+  const dateEl = document.getElementById('booking-date');
+  const timeEl = document.getElementById('booking-time');
+  
+  const bookingDate = dateEl ? dateEl.value : '';
+  const bookingTime = timeEl ? timeEl.value : '';
+
+  if (!bookingDate || !bookingTime) {
+    alert('Please select the Date and Time slot you scheduled on the calendar to receive your confirmation SMS.');
+    return;
+  }
+
+  // Find button to show loading
+  const confirmBtn = document.querySelector('.booking-completed-action-banner button');
+  const originalBtnText = confirmBtn ? confirmBtn.innerHTML : 'Yes, I Have Booked My Slot! → View Confirmation';
+  
+  if (confirmBtn) {
+    confirmBtn.setAttribute('disabled', 'true');
+    confirmBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="margin-right: 8px;"></i>Processing Confirmation...';
+  }
+
+  let deptText = 'General Medicine';
+  if (state.selections.department) {
+    const deptObj = CALENDAR_MAP.departments[state.selections.department];
+    if (deptObj) deptText = deptObj.name;
+  }
+
+  let docText = 'Any Available Specialist';
+  if (state.selections.specialist) {
+    const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
+    if (docObj) docText = docObj.name;
+  }
+
+  // Format date and time beautifully
+  const formattedDate = formatDateString(bookingDate);
+  const formattedTime = formatTimeString(bookingTime);
+
+  // Save selection inside client details state
+  if (state.clientDetails) {
+    state.clientDetails.date = formattedDate;
+    state.clientDetails.time = formattedTime;
+  } else {
+    state.clientDetails = { phone: '', date: formattedDate, time: formattedTime };
+  }
+
+  // Gracefully handle local file:// testing and Node.js static Live Server (port 5500)
+  if (window.location.protocol === 'file:' || window.location.port === '5500') {
+    console.warn('Local file protocol or static Live Server detected (' + (window.location.port === '5500' ? 'VS Code Live Server on port 5500' : 'file://') + '). SMS API dispatch bypassed for local simulation.');
+    console.info('NOTE: Static file servers like VS Code Live Server do not execute PHP and will reject POST requests with a 405 Method Not Allowed error. To test live PHP SMS integrations, please run this project via Apache (XAMPP) at http://localhost/oakspecialisthospital/.');
+    setTimeout(() => {
+      if (confirmBtn) {
+        confirmBtn.removeAttribute('disabled');
+        confirmBtn.innerHTML = originalBtnText;
+      }
+      state.currentStep = 5;
+      renderStep(5);
+    }, 800);
+    return;
+  }
+
+  const payload = {
+    name: 'Client',
+    email: '',
+    phone: state.clientDetails ? state.clientDetails.phone : '',
+    type: state.selections.type,
+    doctor: docText,
+    department: deptText,
+    date: formattedDate,
+    time: formattedTime
+  };
+
+  fetch('send_sms.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('HTTP status ' + response.status + ' (' + response.statusText + ')');
+    }
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new Error('Server did not return a JSON response. Check if your web server supports PHP execution.');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('SMS response:', data);
+    if (data.status === 'simulation') {
+      console.info('SMS Simulation successful:', data.message);
+    } else if (data.status === 'success') {
+      console.info('SMS Sent successfully:', data.message);
+    } else {
+      console.warn('SMS failed to send:', data.message);
+    }
+  })
+  .catch(err => {
+    console.error('Error dispatching SMS request:', err.message || err);
+    console.warn('NOTE: Ensure you are running this project via an active Apache (XAMPP) server to enable PHP backend execution.');
+  })
+  .finally(() => {
+    // Restore button state
+    if (confirmBtn) {
+      confirmBtn.removeAttribute('disabled');
+      confirmBtn.innerHTML = originalBtnText;
+    }
+    
+    // Always transition to Step 5 to ensure user gets their receipt
+    state.currentStep = 5;
+    renderStep(5);
+  });
+};
+
+window.submitBookingFormDetails = function() {
+  const phoneEl = document.getElementById('client-phone');
+
+  if (!phoneEl) return;
+
+  const phone = phoneEl.value.trim();
+
+  if (!phone) {
+    alert('Please enter your telephone number to receive booking confirmation.');
+    return;
+  }
+
+  // Simple validation checks
+  if (phone.length < 9) {
+    alert('Please enter a valid telephone number.');
+    return;
+  }
+
+  // Save details in state
+  state.clientDetails = { phone };
+
+  // Generate / reload calendar schedule
+  generateCalendarSchedule();
+
+  // Hide Details form and show calendar interactive wrapper
+  const formContainer = document.getElementById('booking-details-form-container');
+  const calendarWrapper = document.getElementById('calendar-scheduling-interactive-wrapper');
+
+  if (formContainer) formContainer.style.display = 'none';
+  if (calendarWrapper) calendarWrapper.style.display = 'block';
+};
+
+window.showDetailsForm = function() {
+  const formContainer = document.getElementById('booking-details-form-container');
+  const calendarWrapper = document.getElementById('calendar-scheduling-interactive-wrapper');
+  if (formContainer) formContainer.style.display = 'block';
+  if (calendarWrapper) calendarWrapper.style.display = 'none';
 };
 
 function populateConfirmationReceipt() {
@@ -534,7 +708,7 @@ function populateConfirmationReceipt() {
     instructionsText = 'A secure Google Meet video conference link has been generated and sent to your email. Please check your inbox (and spam/promotions folder) for the calendar invite from Oak Specialist Hospital. Simply click the invite link to join the video session with ' + docText + '.';
   } else {
     locationText = 'Bek-Egg Hotel Rd, Fankyenebra-Santasi, Kumasi, Ghana';
-    instructionsText = 'Please arrive at our clinic 15 minutes prior to your selected time slot for patient registration. Remember to bring any previous medical records, scan reports, or lab results relevant to your consultation. We look forward to receiving you!';
+    instructionsText = 'Please arrive at our clinic 15 minutes prior to your selected time slot for client registration. Remember to bring any previous medical records, scan reports, or lab results relevant to your consultation. We look forward to receiving you!';
   }
 
   // Inject into Step 5 receipt DOM
@@ -543,10 +717,39 @@ function populateConfirmationReceipt() {
   const rDoc = document.getElementById('receipt-val-doc');
   const rLocation = document.getElementById('receipt-val-location');
   const rInstructions = document.getElementById('receipt-val-instructions');
+  const rDateTime = document.getElementById('receipt-val-datetime');
 
   if (rType) rType.textContent = typeText;
   if (rDept) rDept.textContent = deptText;
   if (rDoc) rDoc.textContent = docText;
   if (rLocation) rLocation.textContent = locationText;
   if (rInstructions) rInstructions.textContent = instructionsText;
+  
+  if (rDateTime && state.clientDetails && state.clientDetails.date) {
+    rDateTime.textContent = state.clientDetails.date + ' at ' + state.clientDetails.time;
+  }
+}
+
+// Helper: Format Date String beautifully (e.g. 2026-05-25 -> Mon, May 25, 2026)
+function formatDateString(dateStr) {
+  try {
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', options);
+  } catch (e) {
+    return dateStr;
+  }
+}
+
+// Helper: Format Time String beautifully (e.g. 14:30 -> 2:30 PM)
+function formatTimeString(timeStr) {
+  try {
+    const [hours, minutes] = timeStr.split(':');
+    const h = parseInt(hours, 10);
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    const formattedHours = h % 12 || 12;
+    return `${formattedHours}:${minutes} ${ampm}`;
+  } catch (e) {
+    return timeStr;
+  }
 }

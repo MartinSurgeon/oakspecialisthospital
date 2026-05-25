@@ -394,7 +394,7 @@
                   <p>Choose an available slot directly on the Google Calendar below.</p>
                 </div>
                 
-                <!-- Selections Summary Banner -->
+                 <!-- Selections Summary Banner -->
                 <div class="selection-summary-banner">
                   <div class="summary-details">
                     <div class="summary-item">
@@ -413,36 +413,69 @@
                       <strong id="summary-val-doc">Any Specialist Available</strong>
                     </div>
                   </div>
-                  <button class="summary-change-btn" onclick="resetToStep(1)">Modify Choices</button>
+                  <div class="summary-actions" style="display: flex; gap: 15px;">
+                    <button class="summary-change-btn" onclick="resetToStep(1)"><i class="fa-solid fa-pen-to-square" style="margin-right: 4px;"></i>Modify Choices</button>
+                    <button class="summary-change-btn" id="edit-client-details-btn" onclick="showDetailsForm()" style="display: none;"><i class="fa-solid fa-user-pen" style="margin-right: 4px;"></i>Edit Details</button>
+                  </div>
                 </div>
 
-                <!-- Google Calendar Embed Area -->
-                <div class="calendar-embed-stage">
-                  <div class="calendar-iframe-wrapper" id="calendar-iframe-wrapper">
-                    <iframe src="" id="calendar-booking-iframe" title="Google Calendar Appointment Scheduling"></iframe>
+                <!-- Step 4 Pre-Calendar Details Form -->
+                <div id="booking-details-form-container" style="background: #ffffff; border: 2px solid #eef2f7; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(9, 30, 62, 0.03); max-width: 550px; margin: 0 auto 30px;">
+                  <h4 style="font-size: 18px; font-family: var(--heading-font), sans-serif; font-weight: 700; color: var(--primary-color); border-bottom: 1px solid #eef2f5; padding-bottom: 12px; margin-bottom: 20px; text-align: center;">
+                    <i class="fa-solid fa-phone-volume" style="color: var(--secondary-color); margin-right: 8px;"></i>Enter Telephone for SMS Confirmation
+                  </h4>
+                  <div class="form-group" style="margin-bottom: 25px; position: relative;">
+                    <input type="tel" id="client-phone" placeholder="Telephone Number (e.g. 0244123456)*" required="" style="width: 100%; height: 50px; border: 2px solid #eef2f7; border-radius: 30px; padding: 0 25px 0 50px; outline: none; font-size: 15px; transition: border-color 0.3s ease; color: #1f1f1f; background: #ffffff;" />
+                    <i class="fa-solid fa-phone" style="position: absolute; left: 20px; top: 17px; color: var(--secondary-color);"></i>
                   </div>
-                  
-                  <!-- Fallback Direct Action Card -->
-                  <div class="calendar-fallback-card" id="calendar-fallback-card">
-                    <i class="fa-solid fa-calendar-check"></i>
-                    <h4>Secure Appointment Scheduling</h4>
-                    <p>Click below to open the hospital's official Google Calendar Booking page, choose your preferred slot, and automatically receive a Google Meet video conference link (for virtual sessions) or hospital reservation (for in-person consultations).</p>
+                  <div class="text-center">
+                    <button class="submit-btn" onclick="submitBookingFormDetails()" style="padding: 12px 35px; border-radius: 30px; border: none; font-size: 15px; font-family: var(--heading-font), sans-serif; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 109, 135, 0.15); background: var(--secondary-color); color: #ffffff;">
+                      Proceed to Calendar <i class="fa-solid fa-calendar-days" style="margin-left: 8px;"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Google Calendar Embedding Wrapper (Hidden initially) -->
+                <div id="calendar-scheduling-interactive-wrapper" style="display: none;">
+                  <!-- Google Calendar Embed Area -->
+                  <div class="calendar-embed-stage">
+                    <div class="calendar-iframe-wrapper" id="calendar-iframe-wrapper">
+                      <iframe src="" id="calendar-booking-iframe" title="Google Calendar Appointment Scheduling"></iframe>
+                    </div>
                     
-                    <div class="submit-button cursor-scale small" style="margin: 0 auto; display: inline-block;">
-                      <a href="" target="_blank" class="submit-btn" id="calendar-direct-link" style="padding: 15px 35px; border-radius: 30px; text-decoration: none;">
-                        Schedule on Google Calendar <i class="fa-solid fa-up-right-from-square" style="font-size: 11px; margin-left: 8px;"></i>
-                      </a>
+                    <!-- Fallback Direct Action Card -->
+                    <div class="calendar-fallback-card" id="calendar-fallback-card">
+                      <i class="fa-solid fa-calendar-check"></i>
+                      <h4>Secure Appointment Scheduling</h4>
+                      <p>Click below to open the hospital's official Google Calendar Booking page, choose your preferred slot, and automatically receive a Google Meet video conference link (for virtual sessions) or hospital reservation (for in-person consultations).</p>
+                      
+                      <div class="submit-button cursor-scale small" style="margin: 0 auto; display: inline-block;">
+                        <a href="" target="_blank" class="submit-btn" id="calendar-direct-link" style="padding: 15px 35px; border-radius: 30px; text-decoration: none;">
+                          Schedule on Google Calendar <i class="fa-solid fa-up-right-from-square" style="font-size: 11px; margin-left: 8px;"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- Completed Booking Action Banner -->
-                <div class="booking-completed-action-banner" style="margin-top: 35px; background: rgba(52, 173, 84, 0.08); border: 2px dashed var(--brand-color); border-radius: 16px; padding: 25px; text-align: center;">
-                  <h4 style="font-size: 18px; font-family: var(--heading-font), sans-serif; font-weight: 700; color: var(--primary-color); margin-bottom: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--brand-color); margin-right: 8px;"></i>Completed Booking Your Slot Above?</h4>
-                  <p style="margin-bottom: 18px; color: #515151; font-size: 14px;">Once you have filled out your details and clicked "Book" in the calendar widget, click below to confirm and view your official hospital next steps!</p>
-                  <button class="submit-btn" onclick="navigateToStep5()" style="padding: 12px 30px; border-radius: 30px; background: var(--brand-color); border: none; font-size: 14px; font-family: var(--heading-font), sans-serif; font-weight: 600; color: #ffffff; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(52, 173, 84, 0.2);">
-                    Yes, I Have Booked My Slot! → View Confirmation
-                  </button>
+                  <!-- Completed Booking Action Banner -->
+                  <div class="booking-completed-action-banner" style="margin-top: 35px; background: rgba(52, 173, 84, 0.08); border: 2px dashed var(--brand-color); border-radius: 16px; padding: 25px; text-align: center;">
+                    <h4 style="font-size: 18px; font-family: var(--heading-font), sans-serif; font-weight: 700; color: var(--primary-color); margin-bottom: 8px;"><i class="fa-solid fa-circle-check" style="color: var(--brand-color); margin-right: 8px;"></i>Completed Booking Your Slot Above?</h4>
+                    <p style="margin-bottom: 18px; color: #515151; font-size: 14px;">Please select the Date and Time slot you just booked on the calendar above to receive your SMS confirmation:</p>
+                    
+                    <!-- Date & Time Input Row -->
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; max-width: 480px; margin-left: auto; margin-right: auto;">
+                      <div style="position: relative; flex: 1; min-width: 180px;">
+                        <input type="date" id="booking-date" required="" style="width: 100%; height: 45px; border: 2px solid #eef2f7; border-radius: 30px; padding: 0 20px; outline: none; font-size: 14px; transition: border-color 0.3s ease; color: #1f1f1f; background: #ffffff;" />
+                      </div>
+                      <div style="position: relative; flex: 1; min-width: 180px;">
+                        <input type="time" id="booking-time" required="" style="width: 100%; height: 45px; border: 2px solid #eef2f7; border-radius: 30px; padding: 0 20px; outline: none; font-size: 14px; transition: border-color 0.3s ease; color: #1f1f1f; background: #ffffff;" />
+                      </div>
+                    </div>
+
+                    <button class="submit-btn" onclick="navigateToStep5()" style="padding: 12px 30px; border-radius: 30px; background: var(--brand-color); border: none; font-size: 14px; font-family: var(--heading-font), sans-serif; font-weight: 600; color: #ffffff; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(52, 173, 84, 0.2);">
+                      Yes, I Have Booked My Slot! → View Confirmation
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -479,13 +512,18 @@
                   </div>
 
                   <div class="receipt-row" style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px dashed #eef2f7; padding-bottom: 10px;">
+                    <span style="color: #717171; font-size: 14px;">Scheduled Date & Time:</span>
+                    <strong style="color: var(--primary-color); font-size: 14px;" id="receipt-val-datetime">Loading...</strong>
+                  </div>
+
+                  <div class="receipt-row" style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px dashed #eef2f7; padding-bottom: 10px;">
                     <span style="color: #717171; font-size: 14px;">Location / Meet Link:</span>
                     <strong style="color: var(--secondary-color); font-size: 14px;" id="receipt-val-location">Google Meet Link Sent to Email</strong>
                   </div>
                   
                   <!-- Special Instructions based on selection -->
                   <div id="receipt-instructions-box" style="margin-top: 25px; padding: 15px 20px; background: var(--light); border-left: 4px solid var(--secondary-color); border-radius: 8px; text-align: left;">
-                    <h5 style="font-size: 14px; font-weight: 700; color: var(--primary-color); margin-bottom: 6px;"><i class="fa-solid fa-circle-info" style="margin-right: 6px;"></i>Important Patient Instructions</h5>
+                    <h5 style="font-size: 14px; font-weight: 700; color: var(--primary-color); margin-bottom: 6px;"><i class="fa-solid fa-circle-info" style="margin-right: 6px;"></i>Important Client Instructions</h5>
                     <p style="margin: 0; font-size: 13px; color: #515151; line-height: 1.6;" id="receipt-val-instructions">
                       A calendar invite and Google Meet link have been sent to your email. Please click the invite link to join the video session at your chosen time.
                     </p>
@@ -519,10 +557,8 @@
   <!--==================================================-->
   <!-- End mediket Appoinment Section  -->
   <!--==================================================-->
-
-  <!--==================================================-->
-  <!-- Start mediket Counter Section -->
-  <!--==================================================-->
+<!--
+  Start mediket Counter Section
   <div class="why-choose-us-serction">
     <div class="container">
       <div class="row about-bg align-items-stretch">
@@ -609,10 +645,8 @@
       </div>
     </div>
   </div>
-  <!--==================================================-->
-  <!-- End mediket Counter Section  -->
-  <!--==================================================-->
-
+  End mediket Counter Section
+-->
 
   <!--==================================================-->
   <!-- Start mediket Footer Section -->
