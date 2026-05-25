@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
 
 <!-- Mirrored from aonetheme.com/mediket/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2026 14:57:26 GMT -->
@@ -629,7 +629,7 @@
               <h2>Dr. Osei K. Agyemang</h2>
               <h5>IVF Specialist &amp; Medical Director</h5>
               <div class="team-btn">
-                <a href="appointment.html" title="Book Appointment with Dr. Osei K. Agyemang"><i class="flaticon flaticon-right-arrow"></i></a>
+                <a href="appointment.html?doctor=dr-osei-agyemang" title="Book Appointment with Dr. Osei K. Agyemang"><i class="flaticon flaticon-right-arrow"></i></a>
               </div>
             </div>
           </div>
@@ -652,7 +652,7 @@
               <h2>Dr. Ama Nkrumah</h2>
               <h5>Obstetrics &amp; Gynaecology Specialist</h5>
               <div class="team-btn">
-                <a href="appointment.html" title="Book Appointment with Dr. Ama Nkrumah"><i class="flaticon flaticon-right-arrow"></i></a>
+                <a href="appointment.html?doctor=dr-ama-nkrumah" title="Book Appointment with Dr. Ama Nkrumah"><i class="flaticon flaticon-right-arrow"></i></a>
               </div>
             </div>
           </div>
@@ -675,7 +675,7 @@
               <h2>Dr. Emmanuel Ofori</h2>
               <h5>Paediatrics Specialist</h5>
               <div class="team-btn">
-                <a href="appointment.html" title="Book Appointment with Dr. Emmanuel Ofori"><i class="flaticon flaticon-right-arrow"></i></a>
+                <a href="appointment.html?doctor=dr-emmanuel-ofori" title="Book Appointment with Dr. Emmanuel Ofori"><i class="flaticon flaticon-right-arrow"></i></a>
               </div>
             </div>
           </div>
@@ -698,7 +698,7 @@
               <h2>Dr. Abigail Boateng</h2>
               <h5>Embryology Specialist</h5>
               <div class="team-btn">
-                <a href="appointment.html" title="Book Appointment with Dr. Abigail Boateng"><i class="flaticon flaticon-right-arrow"></i></a>
+                <a href="appointment.html?doctor=dr-abigail-boateng" title="Book Appointment with Dr. Abigail Boateng"><i class="flaticon flaticon-right-arrow"></i></a>
               </div>
             </div>
           </div>
@@ -728,76 +728,70 @@
               <h1>Get an Appoinment</h1>
             </div>
 
-            <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+            <form onsubmit="handleAboutBookingSubmit(event)">
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <div class="form-box">
-                    <input type="text" name="name" placeholder="Full Name*" required="" />
-                    <i class="fa-solid fa-user"></i>
+                    <select id="about-type" name="type" title="Select Consultation Type" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
+                      <option value="" disabled selected>Consultation Type*</option>
+                      <option value="inPerson">In-Person Consultation</option>
+                      <option value="virtual">Virtual (Google Meet)</option>
+                    </select>
+                    <i class="fa-solid fa-video" style="position: absolute; right: 20px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <div class="form-box">
-                    <input type="text" name="email" placeholder="Your E-Mail*" required="" />
-                    <i class="fa-regular fa-envelope"></i>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="form-box">
-                    <input type="text" name="phone" placeholder="Phone Number" required="" />
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6">
-                  <div class="form-box">
-                    <input type="text" name="subject" placeholder="Appoinment Date" required="" />
-                    <i class="fa-solid fa-calendar-days"></i>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <div class="form-box">
-                    <select id="about-dept" name="department" title="Select Department" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
+                    <select id="about-treatment" name="department" title="Select Department" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
                       <option value="" disabled selected>Select Department*</option>
-                      <option value="General/Family Medicine">General/Family Medicine</option>
-                      <option value="Obstetrics/Gynaecology">Obstetrics/Gynaecology</option>
-                      <option value="In Vitro Fertilization">In Vitro Fertilization</option>
-                      <option value="Paediatrics">Paediatrics</option>
-                      <option value="Internal Medicine">Internal Medicine</option>
-                      <option value="Surgery">Surgery</option>
-                      <option value="General Laboratory">General Laboratory</option>
-                      <option value="Pharmacy">Pharmacy</option>
-                      <option value="Ultrasound Scan Services">Ultrasound Scan Services</option>
+                      <option value="general-medicine">General/Family Medicine</option>
+                      <option value="obstetrics-gynaecology">Obstetrics/Gynaecology</option>
+                      <option value="ivf">In Vitro Fertilization</option>
+                      <option value="paediatrics">Paediatrics</option>
+                      <option value="internal-medicine">Internal Medicine</option>
+                      <option value="surgery">Surgery</option>
+                      <option value="lab">General Laboratory</option>
+                      <option value="pharmacy">Pharmacy</option>
+                      <option value="ultrasound">Ultrasound Scan Services</option>
                     </select>
                     <i class="fa-solid fa-stethoscope" style="position: absolute; right: 20px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-12">
                   <div class="form-box">
                     <select id="about-doctor" name="specialist" title="Select Doctor" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 20px; font-size: 15px; color: #616161; height: 50px; appearance: none; -webkit-appearance: none;">
                       <option value="" disabled selected>Select Specialist*</option>
-                      <option value="Dr. Osei K. Agyemang">Dr. Osei K. Agyemang (IVF Specialist)</option>
-                      <option value="Dr. Ama Nkrumah">Dr. Ama Nkrumah (Obstetrics & Gynaecology)</option>
-                      <option value="Dr. Emmanuel Ofori">Dr. Emmanuel Ofori (Paediatrics)</option>
-                      <option value="Dr. Abigail Boateng">Dr. Abigail Boateng (Embryology)</option>
-                      <option value="Any Specialist Available">Any Specialist Available</option>
+                      <option value="dr-osei-agyemang">Dr. Osei K. Agyemang (IVF Specialist)</option>
+                      <option value="dr-ama-nkrumah">Dr. Ama Nkrumah (Obstetrics & Gynaecology)</option>
+                      <option value="dr-emmanuel-ofori">Dr. Emmanuel Ofori (Paediatrics)</option>
+                      <option value="dr-abigail-boateng">Dr. Abigail Boateng (Embryology)</option>
+                      <option value="any">Any Specialist Available</option>
                     </select>
                     <i class="fa-solid fa-user-doctor" style="position: absolute; right: 20px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
                 </div>
-                <div class="col-lg-12 col-md-6">
+                <div class="col-lg-12">
                   <div class="check_bx">
                     <input type="checkbox" id="about-agree" title="I agree to terms and conditions" required="">
                     <label for="about-agree" style="font-size: 14px; color: #616161; margin-left: 10px; cursor: pointer;">I agree to terms and conditions</label>
                   </div>
                   <div class="submit-button cursor-scale small" style="margin-top: 20px;">
                     <button class="submit-btn" type="submit">
-                      Book Appointment <i class="flaticon flaticon-right-arrow"></i>
+                      Proceed to Calendar <i class="flaticon flaticon-right-arrow"></i>
                     </button>
                   </div>
                 </div>
               </div>
             </form>
+            <script type="text/javascript">
+              function handleAboutBookingSubmit(event) {
+                event.preventDefault();
+                var type = document.getElementById('about-type').value;
+                var dept = document.getElementById('about-treatment').value;
+                var doctor = document.getElementById('about-doctor').value;
+                window.location.href = 'appointment.html?type=' + type + '&dept=' + dept + '&doctor=' + doctor;
+              }
+            </script>
           </div>
         </div>
       </div>
