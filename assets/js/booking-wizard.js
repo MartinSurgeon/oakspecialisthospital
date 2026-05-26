@@ -525,7 +525,10 @@ function parseQueryParams() {
   // Set Specialist (checked first because it auto-fills department)
   if (doctorParam) {
     const doctorKey = doctorParam.toLowerCase();
-    if (CALENDAR_MAP.doctors[doctorKey]) {
+    const docInCal = CALENDAR_MAP.doctors[doctorKey];
+    const docInGlobal = window.DOCTORS_DATA.find(d => d.id === doctorKey);
+    
+    if (docInCal || docInGlobal) {
       state.selections.specialist = doctorKey;
       validSelections++;
       
@@ -539,17 +542,19 @@ function parseQueryParams() {
       });
       
       // Auto fill doctor's department in selections
-      const doctorObj = CALENDAR_MAP.doctors[doctorKey];
-      state.selections.department = doctorObj.department;
-      
-      const deptCards = document.querySelectorAll('.dept-selection-card');
-      deptCards.forEach(c => {
-        if (c.getAttribute('data-value') === doctorObj.department) {
-          c.classList.add('selected');
-        } else {
-          c.classList.remove('selected');
-        }
-      });
+      const deptKey = docInCal ? docInCal.department : (docInGlobal ? docInGlobal.dept : null);
+      if (deptKey) {
+        state.selections.department = deptKey;
+        
+        const deptCards = document.querySelectorAll('.dept-selection-card');
+        deptCards.forEach(c => {
+          if (c.getAttribute('data-value') === deptKey) {
+            c.classList.add('selected');
+          } else {
+            c.classList.remove('selected');
+          }
+        });
+      }
     }
   }
 
@@ -619,8 +624,17 @@ window.navigateToStep5 = function() {
 
   let docText = 'Any Available Specialist';
   if (state.selections.specialist) {
-    const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
-    if (docObj) docText = docObj.name;
+    if (state.selections.specialist === 'any') {
+      docText = 'Any Available Specialist';
+    } else {
+      const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
+      if (docObj) {
+        docText = docObj.name;
+      } else {
+        const docRecord = window.DOCTORS_DATA.find(d => d.id === state.selections.specialist);
+        if (docRecord) docText = docRecord.name;
+      }
+    }
   }
 
   // Format date and time beautifully
