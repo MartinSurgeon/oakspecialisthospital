@@ -668,3 +668,100 @@
 .doctor-avatar-circle.grad-5 { background: linear-gradient(135deg, #9b59b6 0%, #d2b4de 100%); color: #ffffff; }
 .doctor-avatar-circle.grad-6 { background: linear-gradient(135deg, #e74c3c 0%, #f5b7b1 100%); color: #ffffff; }
 
+/* ==============================================================
+   Oak Specialist Hospital — Print Receipt Mode Stylesheet
+   ============================================================== */
+@media print {
+  /* Hide all elements that are not part of the printed receipt card */
+  #sticky-header,
+  .mobile-menu-area,
+  .breatcome-section,
+  .loader-wrapper,
+  .cursor,
+  .cursor2,
+  .mediket-section-title,
+  .wizard-progress-bar,
+  .wizard-step-pane:not(#step-pane-5),
+  .success-checkmark-wrapper,
+  #step-pane-5 > .step-pane-header,
+  #step-pane-5 > .text-center,
+  .wizard-navigation-actions,
+  .footer-section,
+  .xs-sidebar-group {
+    display: none !important;
+  }
+
+  /* Reset outer layouts for a clean print output without huge empty spaces or borders */
+  body {
+    background: #ffffff !important;
+    color: #1f1f1f !important;
+    font-size: 13px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .appoinment-section,
+  .booking-wizard-container,
+  .wizard-steps-wrapper,
+  .wizard-step-pane,
+  .container,
+  .row,
+  .col-lg-10 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Show and style the print-specific header inside the receipt card */
+  .print-receipt-header {
+    display: block !important;
+  }
+
+  /* Premium receipt card layout on paper */
+  .confirmation-receipt-card {
+    border: 1px solid #eef2f7 !important;
+    box-shadow: none !important;
+    padding: 30px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Keep the receipt row layout correct in print */
+  .receipt-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 15px !important;
+    border-bottom: 1px dashed #eef2f7 !important;
+    padding-bottom: 10px !important;
+  }
+
+  .receipt-row span {
+    color: #717171 !important;
+    font-size: 13px !important;
+  }
+
+  .receipt-row strong {
+    color: #000000 !important;
+    font-size: 13px !important;
+  }
+
+  #receipt-instructions-box {
+    display: block !important;
+    margin-top: 25px !important;
+    padding: 15px 20px !important;
+    background: #f8fafc !important;
+    border-left: 4px solid var(--secondary-color) !important;
+    border-radius: 8px !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
