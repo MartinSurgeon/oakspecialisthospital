@@ -7634,6 +7634,12 @@ to {
               0 0 30px rgba(0, 128, 128, 0.15) !important;
 }
 
+/* Permanent disablement of custom mouse follower circles */
+.cursor, 
+.cursor2 {
+  display: none !important;
+}
+
 
 
 

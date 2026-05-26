@@ -1,8 +1,8 @@
 //AOS Anomation
 AOS.init();
 
-// Curser Pointer
-
+// Custom Cursor Pointer (Disabled)
+/*
 let cursor = document.querySelector(".cursor");
 let cursor2 = document.querySelector(".cursor2");
 let cursorScale = document.querySelectorAll(".cursor-scale");
@@ -48,6 +48,7 @@ cursorScale.forEach((link) => {
     cursor.classList.remove("grow-small");
   });
 });
+*/
 
 // ==============================================================
 // Oak Specialist Hospital — Premium Global Alert Overrides
