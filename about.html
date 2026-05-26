@@ -233,7 +233,7 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                   <div class="about-counter-single-box" data-aos="fade-up">
-                    <div class="odometer-wrapper counter-box-title2" data-count="25">
+                    <div class="odometer-wrapper counter-box-title2" data-count="47">
                       <h1 class="odometer"></h1>
                       <h1>+</h1>
                     </div>
@@ -746,16 +746,20 @@
                 <div class="col-lg-6 col-md-6">
                   <div class="form-box">
                     <select id="about-treatment" name="department" title="Select Department" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 75px; font-size: 15px; color: #ffffff; height: 55px; appearance: none; -webkit-appearance: none;">
-                      <option value="" disabled selected style="color: #616161; background: #1e3348;">Select Department*</option>
+                      <option value="" disabled selected style="color: #616161; background: #1e3348;">Select Specialty*</option>
                       <option value="general-medicine" style="color: #ffffff; background: #1e3348;">General/Family Medicine</option>
                       <option value="obstetrics-gynaecology" style="color: #ffffff; background: #1e3348;">Obstetrics/Gynaecology</option>
-                      <option value="ivf" style="color: #ffffff; background: #1e3348;">In Vitro Fertilization</option>
+                      <option value="ivf" style="color: #ffffff; background: #1e3348;">Fertility & IVF</option>
                       <option value="paediatrics" style="color: #ffffff; background: #1e3348;">Paediatrics</option>
+                      <option value="gynae-oncology" style="color: #ffffff; background: #1e3348;">Gynae-oncology</option>
+                      <option value="pediatric-surgery" style="color: #ffffff; background: #1e3348;">Pediatric Surgery</option>
+                      <option value="general-surgery" style="color: #ffffff; background: #1e3348;">General Surgery</option>
+                      <option value="anaesthetic" style="color: #ffffff; background: #1e3348;">Anaesthetics</option>
                       <option value="internal-medicine" style="color: #ffffff; background: #1e3348;">Internal Medicine</option>
-                      <option value="surgery" style="color: #ffffff; background: #1e3348;">Surgery</option>
-                      <option value="lab" style="color: #ffffff; background: #1e3348;">General Laboratory</option>
-                      <option value="pharmacy" style="color: #ffffff; background: #1e3348;">Pharmacy</option>
-                      <option value="ultrasound" style="color: #ffffff; background: #1e3348;">Ultrasound Scan Services</option>
+                      <option value="haematology" style="color: #ffffff; background: #1e3348;">Haematology</option>
+                      <option value="opthalmology" style="color: #ffffff; background: #1e3348;">Ophthalmology</option>
+                      <option value="dietician" style="color: #ffffff; background: #1e3348;">Dietician & Nutrition</option>
+                      <option value="other-services" style="color: #ffffff; background: #1e3348;">Other Services</option>
                     </select>
                     <i class="fa-solid fa-stethoscope" style="position: absolute; left: 30px; top: 18px; color: var(--secondary-color);"></i>
                   </div>
@@ -764,10 +768,6 @@
                   <div class="form-box">
                     <select id="about-doctor" name="specialist" title="Select Doctor" required="" style="width: 100%; border: none; outline: none; background: transparent; padding-left: 75px; font-size: 15px; color: #ffffff; height: 55px; appearance: none; -webkit-appearance: none;">
                       <option value="" disabled selected style="color: #616161; background: #1e3348;">Select Specialist*</option>
-                      <option value="dr-osei-agyemang" style="color: #ffffff; background: #1e3348;">Dr. Osei K. Agyemang (IVF Specialist)</option>
-                      <option value="dr-ama-nkrumah" style="color: #ffffff; background: #1e3348;">Dr. Ama Nkrumah (Obstetrics & Gynaecology)</option>
-                      <option value="dr-emmanuel-ofori" style="color: #ffffff; background: #1e3348;">Dr. Emmanuel Ofori (Paediatrics)</option>
-                      <option value="dr-abigail-boateng" style="color: #ffffff; background: #1e3348;">Dr. Abigail Boateng (Embryology)</option>
                       <option value="any" style="color: #ffffff; background: #1e3348;">Any Specialist Available</option>
                     </select>
                     <i class="fa-solid fa-user-doctor" style="position: absolute; left: 30px; top: 18px; color: var(--secondary-color);"></i>
@@ -787,6 +787,10 @@
               </div>
             </form>
             <script type="text/javascript">
+              document.addEventListener('DOMContentLoaded', () => {
+                window.bindDynamicDoctorFiltering('about-treatment', 'about-doctor');
+              });
+
               function handleAboutBookingSubmit(event) {
                 event.preventDefault();
                 var type = document.getElementById('about-type').value;

@@ -278,56 +278,120 @@
               <div class="wizard-step-pane" id="step-pane-2">
                 <div class="step-pane-header">
                   <h3>Select Specialty / Department</h3>
-                  <p>Choose the medical department that fits your clinical care needs.</p>
+                  <p>Choose the medical specialty or department that fits your clinical care needs.</p>
+                </div>
+
+                <!-- HCI Visual Chunking: Specialty Filter Tabs -->
+                <div class="specialty-filter-tabs">
+                  <button class="filter-tab-btn active" data-category="all" type="button">All Specialties</button>
+                  <button class="filter-tab-btn" data-category="primary" type="button">Primary & Maternal</button>
+                  <button class="filter-tab-btn" data-category="surgical" type="button">Surgical Care</button>
+                  <button class="filter-tab-btn" data-category="special" type="button">Specialty Medicine</button>
                 </div>
                 
                 <div class="choice-cards-grid grid-cols-3">
-                  <!-- General Medicine -->
-                  <div class="option-selection-card dept-selection-card" data-value="general-medicine">
+                  <!-- General Medicine (Primary) -->
+                  <div class="option-selection-card dept-selection-card" data-value="general-medicine" data-category="primary">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
                     <div class="card-selection-icon"><i class="fa-solid fa-stethoscope"></i></div>
                     <h4 class="option-card-title">General / Family</h4>
                     <p class="option-card-subtitle">Primary clinical care, health advice & routine exams.</p>
                   </div>
 
-                  <!-- Obstetrics/Gynaecology -->
-                  <div class="option-selection-card dept-selection-card" data-value="obstetrics-gynaecology">
+                  <!-- Obstetrics/Gynaecology (Primary) -->
+                  <div class="option-selection-card dept-selection-card" data-value="obstetrics-gynaecology" data-category="primary">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
                     <div class="card-selection-icon"><i class="fa-solid fa-person-breastfeeding"></i></div>
                     <h4 class="option-card-title">Obstetrics & Gynaecology</h4>
                     <p class="option-card-subtitle">Comprehensive women's care and antenatal services.</p>
                   </div>
 
-                  <!-- IVF -->
-                  <div class="option-selection-card dept-selection-card" data-value="ivf">
+                  <!-- IVF (Primary) -->
+                  <div class="option-selection-card dept-selection-card" data-value="ivf" data-category="primary">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
                     <div class="card-selection-icon"><i class="fa-solid fa-baby"></i></div>
                     <h4 class="option-card-title">Fertility & IVF</h4>
                     <p class="option-card-subtitle">Leading fertility care and in vitro fertilization solutions.</p>
                   </div>
 
-                  <!-- Paediatrics -->
-                  <div class="option-selection-card dept-selection-card" data-value="paediatrics">
+                  <!-- Paediatrics (Primary) -->
+                  <div class="option-selection-card dept-selection-card" data-value="paediatrics" data-category="primary">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
                     <div class="card-selection-icon"><i class="fa-solid fa-child"></i></div>
                     <h4 class="option-card-title">Paediatrics</h4>
                     <p class="option-card-subtitle">Specialized medical services for babies, kids & teens.</p>
                   </div>
 
-                  <!-- Internal Medicine -->
-                  <div class="option-selection-card dept-selection-card" data-value="internal-medicine">
+                  <!-- Gynae-oncology (Surgical) -->
+                  <div class="option-selection-card dept-selection-card" data-value="gynae-oncology" data-category="surgical">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-ribbon"></i></div>
+                    <h4 class="option-card-title">Gynae-oncology</h4>
+                    <p class="option-card-subtitle">Specialized screening and care for women's reproductive cancers.</p>
+                  </div>
+
+                  <!-- Pediatric Surgery (Surgical) -->
+                  <div class="option-selection-card dept-selection-card" data-value="pediatric-surgery" data-category="surgical">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h4 class="option-card-title">Pediatric Surgery</h4>
+                    <p class="option-card-subtitle">Specialized surgical procedures designed for infants and kids.</p>
+                  </div>
+
+                  <!-- General Surgery (Surgical) -->
+                  <div class="option-selection-card dept-selection-card" data-value="general-surgery" data-category="surgical">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-kit-medical"></i></div>
+                    <h4 class="option-card-title">General Surgery</h4>
+                    <p class="option-card-subtitle">Advanced inpatient and outpatient surgical procedures.</p>
+                  </div>
+
+                  <!-- Anaesthetic (Surgical) -->
+                  <div class="option-selection-card dept-selection-card" data-value="anaesthetic" data-category="surgical">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-syringe"></i></div>
+                    <h4 class="option-card-title">Anaesthetics</h4>
+                    <p class="option-card-subtitle">Pre-operative care, pain control & anesthesia administration.</p>
+                  </div>
+
+                  <!-- Internal Medicine (Special) -->
+                  <div class="option-selection-card dept-selection-card" data-value="internal-medicine" data-category="special">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
                     <div class="card-selection-icon"><i class="fa-solid fa-heart-pulse"></i></div>
                     <h4 class="option-card-title">Internal Medicine</h4>
-                    <p class="option-card-subtitle">Prevention, diagnosis, and treatment of adult diseases.</p>
+                    <p class="option-card-subtitle">Prevention, diagnosis, and treatment of complex adult diseases.</p>
                   </div>
 
-                  <!-- Surgery -->
-                  <div class="option-selection-card dept-selection-card" data-value="surgery">
+                  <!-- Haematology (Special) -->
+                  <div class="option-selection-card dept-selection-card" data-value="haematology" data-category="special">
                     <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="card-selection-icon"><i class="fa-solid fa-kit-medical"></i></div>
-                    <h4 class="option-card-title">Surgery</h4>
-                    <p class="option-card-subtitle">Advanced inpatient and outpatient surgical procedures.</p>
+                    <div class="card-selection-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h4 class="option-card-title">Haematology</h4>
+                    <p class="option-card-subtitle">Specialist care for blood-related conditions and anemia.</p>
+                  </div>
+
+                  <!-- Ophthalmology (Special) -->
+                  <div class="option-selection-card dept-selection-card" data-value="opthalmology" data-category="special">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h4 class="option-card-title">Ophthalmology</h4>
+                    <p class="option-card-subtitle">Comprehensive medical and surgical eye care treatments.</p>
+                  </div>
+
+                  <!-- Dietician (Special) -->
+                  <div class="option-selection-card dept-selection-card" data-value="dietician" data-category="special">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h4 class="option-card-title">Dietician & Nutrition</h4>
+                    <p class="option-card-subtitle">Expert counseling, weight management & therapeutic diets.</p>
+                  </div>
+
+                  <!-- Any Other Services (Special) -->
+                  <div class="option-selection-card dept-selection-card" data-value="other-services" data-category="special">
+                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+                    <div class="card-selection-icon"><i class="fa-solid fa-circle-question"></i></div>
+                    <h4 class="option-card-title">Other Services</h4>
+                    <p class="option-card-subtitle">Diagnostic lab exams, pharmacy refills, or custom inquiries.</p>
                   </div>
                 </div>
               </div>
@@ -339,52 +403,14 @@
                   <p>Book a consultation directly with one of our board-certified medical experts.</p>
                 </div>
                 
-                <div class="choice-cards-grid grid-cols-3">
-                  <!-- Dr. Osei K. Agyemang -->
-                  <div class="option-selection-card doc-selection-card doctor-selection-card" data-value="dr-osei-agyemang">
-                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="doctor-avatar-circle">DO</div>
-                    <h4 class="option-card-title">Dr. Osei K. Agyemang</h4>
-                    <p class="option-card-subtitle">Medical Director & IVF Specialist</p>
-                    <span class="doctor-specialty-badge">IVF Pioneer</span>
-                  </div>
-
-                  <!-- Dr. Ama Nkrumah -->
-                  <div class="option-selection-card doc-selection-card doctor-selection-card" data-value="dr-ama-nkrumah">
-                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="doctor-avatar-circle">DA</div>
-                    <h4 class="option-card-title">Dr. Ama Nkrumah</h4>
-                    <p class="option-card-subtitle">Senior OB/GYN Consultant</p>
-                    <span class="doctor-specialty-badge">Maternal Health</span>
-                  </div>
-
-                  <!-- Dr. Emmanuel Ofori -->
-                  <div class="option-selection-card doc-selection-card doctor-selection-card" data-value="dr-emmanuel-ofori">
-                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="doctor-avatar-circle">DE</div>
-                    <h4 class="option-card-title">Dr. Emmanuel Ofori</h4>
-                    <p class="option-card-subtitle">Consultant Paediatrician</p>
-                    <span class="doctor-specialty-badge">Child Specialist</span>
-                  </div>
-
-                  <!-- Dr. Abigail Boateng -->
-                  <div class="option-selection-card doc-selection-card doctor-selection-card" data-value="dr-abigail-boateng">
-                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="doctor-avatar-circle">DB</div>
-                    <h4 class="option-card-title">Dr. Abigail Boateng</h4>
-                    <p class="option-card-subtitle">Consultant Embryologist</p>
-                    <span class="doctor-specialty-badge">Embryology Expert</span>
-                  </div>
-
-                  <!-- Any Available Specialist -->
-                  <div class="option-selection-card doc-selection-card doctor-selection-card" data-value="any">
-                    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
-                    <div class="doctor-avatar-circle"><i class="fa-solid fa-user-doctor"></i></div>
-                    <h4 class="option-card-title">Any Available Doctor</h4>
-                    <p class="option-card-subtitle">Schedule with the first available specialist doctor.</p>
-                    <span class="doctor-specialty-badge">Fast-Track</span>
-                  </div>
+                <!-- Sleek Search Box for Cognitive Load Reduction -->
+                <div class="doctor-search-wrapper">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input type="text" id="doctor-search" placeholder="Search by specialist name, title, or keyword..." autocomplete="off" />
                 </div>
+                
+                <!-- Choice cards grid (populated dynamically by JavaScript) -->
+                <div class="choice-cards-grid grid-cols-3"></div>
               </div>
 
               <!-- STEP 4: Calendar Scheduling -->

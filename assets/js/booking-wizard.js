@@ -78,18 +78,43 @@ const CALENDAR_MAP = {
       virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
       inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
     },
-    'lab': {
-      name: 'General Laboratory',
+    'pediatric-surgery': {
+      name: 'Pediatric Surgery',
       virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
       inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
     },
-    'pharmacy': {
-      name: 'Pharmacy',
+    'general-surgery': {
+      name: 'General Surgery',
       virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
       inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
     },
-    'ultrasound': {
-      name: 'Ultrasound Scan Services',
+    'anaesthetic': {
+      name: 'Anaesthetic',
+      virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
+      inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
+    },
+    'gynae-oncology': {
+      name: 'Gynae-oncology',
+      virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
+      inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
+    },
+    'haematology': {
+      name: 'Haematology',
+      virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
+      inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
+    },
+    'opthalmology': {
+      name: 'Opthalmology',
+      virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
+      inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
+    },
+    'dietician': {
+      name: 'Dietician',
+      virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
+      inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
+    },
+    'other-services': {
+      name: 'Any other services',
       virtual: 'https://calendar.app.google/GZWKQ9498GU69czN6',
       inPerson: 'https://calendar.app.google/GZWKQ9498GU69czN6'
     }
@@ -115,9 +140,18 @@ const state = {
 document.addEventListener('DOMContentLoaded', () => {
   // Setup selectors
   initializeChoiceCards();
+  initializeSpecialtyFilters();
   initializeNavButtons();
   initializeProgressBarNodes();
   
+  // Dynamic search listener for doctor selection
+  const searchInput = document.getElementById('doctor-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      filterDoctorsBySearch(e.target.value);
+    });
+  }
+
   // Parse query parameters for auto-selection
   parseQueryParams();
   
@@ -142,14 +176,6 @@ function initializeChoiceCards() {
       selectChoice('department', card.getAttribute('data-value'), deptCards, card);
     });
   });
-
-  // Doctor cards (Step 3)
-  const docCards = document.querySelectorAll('.doc-selection-card');
-  docCards.forEach(card => {
-    card.addEventListener('click', () => {
-      selectChoice('specialist', card.getAttribute('data-value'), docCards, card);
-    });
-  });
 }
 
 function selectChoice(key, value, cardGroup, selectedCard) {
@@ -157,11 +183,11 @@ function selectChoice(key, value, cardGroup, selectedCard) {
   
   // Update visual selection class
   cardGroup.forEach(c => c.classList.remove('selected'));
-  selectedCard.classList.add('selected');
+  if (selectedCard) selectedCard.classList.add('selected');
   
   // Auto-fill related fields if applicable
   if (key === 'specialist' && value !== 'any' && value !== '') {
-    const doctorObj = CALENDAR_MAP.doctors[value];
+    const doctorObj = CALENDAR_MAP.doctors[value] || window.DOCTORS_DATA.find(d => d.id === value);
     if (doctorObj && doctorObj.department) {
       // Pre-select doctor's department in state silently
       state.selections.department = doctorObj.department;
@@ -170,6 +196,16 @@ function selectChoice(key, value, cardGroup, selectedCard) {
       const deptCards = document.querySelectorAll('.dept-selection-card');
       deptCards.forEach(c => {
         if (c.getAttribute('data-value') === doctorObj.department) {
+          c.classList.add('selected');
+        } else {
+          c.classList.remove('selected');
+        }
+      });
+    } else if (doctorObj && doctorObj.dept) { // from DOCTORS_DATA
+      state.selections.department = doctorObj.dept;
+      const deptCards = document.querySelectorAll('.dept-selection-card');
+      deptCards.forEach(c => {
+        if (c.getAttribute('data-value') === doctorObj.dept) {
           c.classList.add('selected');
         } else {
           c.classList.remove('selected');
@@ -320,6 +356,11 @@ function renderStep(stepNumber) {
     }
   }
 
+  // Trigger dynamic doctor grid generation on Step 3
+  if (stepNumber === 3) {
+    renderDoctorSelectionGrid();
+  }
+
   // Trigger Google Calendar Generation on Step 4
   if (stepNumber === 4) {
     generateCalendarSchedule();
@@ -373,6 +414,15 @@ function generateCalendarSchedule() {
     const doctorObj = CALENDAR_MAP.doctors[state.selections.specialist];
     if (doctorObj && doctorObj[typeKey]) {
       bookingUrl = doctorObj[typeKey];
+    } else {
+      // Fallback: search in global DOCTORS_DATA to find the doctor's department
+      const docRecord = window.DOCTORS_DATA.find(d => d.id === state.selections.specialist);
+      if (docRecord && docRecord.dept) {
+        const deptObj = CALENDAR_MAP.departments[docRecord.dept];
+        if (deptObj && deptObj[typeKey]) {
+          bookingUrl = deptObj[typeKey];
+        }
+      }
     }
   } else if (state.selections.department) {
     const deptObj = CALENDAR_MAP.departments[state.selections.department];
@@ -417,8 +467,17 @@ function renderSummaryBanner() {
 
   let docText = 'Any Available Specialist';
   if (state.selections.specialist) {
-    const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
-    if (docObj) docText = docObj.name;
+    if (state.selections.specialist === 'any') {
+      docText = 'Any Available Specialist';
+    } else {
+      const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
+      if (docObj) {
+        docText = docObj.name;
+      } else {
+        const docRecord = window.DOCTORS_DATA.find(d => d.id === state.selections.specialist);
+        if (docRecord) docText = docRecord.name;
+      }
+    }
   }
 
   // Inject into summary banner
@@ -704,8 +763,17 @@ function populateConfirmationReceipt() {
 
   let docText = 'Any Available Specialist';
   if (state.selections.specialist) {
-    const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
-    if (docObj) docText = docObj.name;
+    if (state.selections.specialist === 'any') {
+      docText = 'Any Available Specialist';
+    } else {
+      const docObj = CALENDAR_MAP.doctors[state.selections.specialist];
+      if (docObj) {
+        docText = docObj.name;
+      } else {
+        const docRecord = window.DOCTORS_DATA.find(d => d.id === state.selections.specialist);
+        if (docRecord) docText = docRecord.name;
+      }
+    }
   }
 
   // Determine Location and Instructions
@@ -738,6 +806,197 @@ function populateConfirmationReceipt() {
     rDateTime.textContent = state.clientDetails.date + ' at ' + state.clientDetails.time;
   }
 }
+
+// Helper: Format Date String beautifully (e.g. 2026-05-25 -> Mon, May 25, 2026)
+function formatDateString(dateStr) {
+  try {
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', options);
+  } catch (e) {
+    return dateStr;
+  }
+}
+
+// Helper: Format Time String beautifully (e.g. 14:30 -> 2:30 PM)
+function formatTimeString(timeStr) {
+  try {
+    const [hours, minutes] = timeStr.split(':');
+    const h = parseInt(hours, 10);
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    const formattedHours = h % 12 || 12;
+    return `${formattedHours}:${minutes} ${ampm}`;
+  } catch (e) {
+    return timeStr;
+  }
+}
+
+// ==============================================================
+// Oak Specialist Hospital — Interactive HCI Specialty Dynamic Filters
+// ==============================================================
+function initializeSpecialtyFilters() {
+  const filterBtns = document.querySelectorAll('.filter-tab-btn');
+  const specialtyCards = document.querySelectorAll('.dept-selection-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Set active button style
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.getAttribute('data-category');
+
+      specialtyCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
+          card.classList.remove('hidden-by-filter');
+        } else {
+          card.classList.add('hidden-by-filter');
+        }
+      });
+    });
+  });
+}
+
+// ==============================================================
+// Oak Specialist Hospital — Dynamic Specialist Doctor Card Generator
+// ==============================================================
+function renderDoctorSelectionGrid() {
+  const gridContainer = document.querySelector('#step-pane-3 .choice-cards-grid');
+  if (!gridContainer) return;
+
+  // Clear existing content
+  gridContainer.innerHTML = '';
+
+  const selectedDept = state.selections.department;
+  
+  // Filter doctors belonging to selected department
+  let filteredDoctors = [];
+  if (selectedDept) {
+    filteredDoctors = window.DOCTORS_DATA.filter(doc => doc.dept === selectedDept);
+  } else {
+    filteredDoctors = window.DOCTORS_DATA;
+  }
+
+  // If no doctors are found, show a clean message
+  if (filteredDoctors.length === 0) {
+    gridContainer.innerHTML = `
+      <div class="no-results-message">
+        <i class="fa-solid fa-user-doctor"></i>
+        <p>No specific specialists registered under this department yet. Please choose "Any Available Doctor" below.</p>
+      </div>
+    `;
+  }
+
+  // Create cards for each doctor
+  filteredDoctors.forEach((doc, index) => {
+    const isSelected = state.selections.specialist === doc.id;
+    
+    // Choose a gradient color variation based on index
+    const gradIndex = (index % 6) + 1;
+    
+    // Extract initials (e.g. "Dr. Rex Djokoto" -> "RD", "Rd. Benjamin" -> "RB")
+    const cleanedName = doc.name.replace(/^(Dr\.|Rd\.)\s+/i, '');
+    const nameParts = cleanedName.split(' ');
+    const initials = nameParts.map(p => p[0]).slice(0, 2).join('').toUpperCase();
+
+    const card = document.createElement('div');
+    card.className = `option-selection-card doc-selection-card doctor-selection-card ${isSelected ? 'selected' : ''}`;
+    card.setAttribute('data-value', doc.id);
+    
+    card.innerHTML = `
+      <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+      <div class="doctor-avatar-circle grad-${gradIndex}">${initials}</div>
+      <h4 class="option-card-title">${doc.name}</h4>
+      <p class="option-card-subtitle">${doc.title}</p>
+      <span class="doctor-specialty-badge">${doc.badge}</span>
+    `;
+
+    // Click listener to select doctor
+    card.addEventListener('click', () => {
+      const allCards = gridContainer.querySelectorAll('.doc-selection-card');
+      selectChoice('specialist', doc.id, allCards, card);
+    });
+
+    gridContainer.appendChild(card);
+  });
+
+  // Always append the "Any Available Doctor" option
+  const isAnySelected = state.selections.specialist === 'any';
+  const anyCard = document.createElement('div');
+  anyCard.className = `option-selection-card doc-selection-card doctor-selection-card ${isAnySelected ? 'selected' : ''}`;
+  anyCard.setAttribute('data-value', 'any');
+  
+  anyCard.innerHTML = `
+    <div class="card-checked-indicator"><i class="fa-solid fa-check"></i></div>
+    <div class="doctor-avatar-circle"><i class="fa-solid fa-user-doctor"></i></div>
+    <h4 class="option-card-title">Any Available Doctor</h4>
+    <p class="option-card-subtitle">Schedule with the first available specialist doctor.</p>
+    <span class="doctor-specialty-badge">Fast-Track</span>
+  `;
+
+  anyCard.addEventListener('click', () => {
+    const allCards = gridContainer.querySelectorAll('.doc-selection-card');
+    selectChoice('specialist', 'any', allCards, anyCard);
+  });
+
+  gridContainer.appendChild(anyCard);
+  
+  // Re-run search filtering if query is already present in search bar
+  const searchInput = document.getElementById('doctor-search');
+  if (searchInput && searchInput.value) {
+    filterDoctorsBySearch(searchInput.value);
+  }
+}
+
+// ==============================================================
+// Oak Specialist Hospital — Real-Time Text Search Filtering
+// ==============================================================
+function filterDoctorsBySearch(query) {
+  const cards = document.querySelectorAll('#step-pane-3 .doctor-selection-card');
+  const normalizedQuery = query.toLowerCase().trim();
+  let matchCount = 0;
+
+  cards.forEach(card => {
+    const value = card.getAttribute('data-value');
+    if (value === 'any') {
+      // Always show 'Any Available Doctor'
+      card.classList.remove('hidden-by-filter');
+      return;
+    }
+
+    const titleEl = card.querySelector('.option-card-title');
+    const subtitleEl = card.querySelector('.option-card-subtitle');
+    const badgeEl = card.querySelector('.doctor-specialty-badge');
+
+    const titleText = titleEl ? titleEl.textContent.toLowerCase() : '';
+    const subtitleText = subtitleEl ? subtitleEl.textContent.toLowerCase() : '';
+    const badgeText = badgeEl ? badgeEl.textContent.toLowerCase() : '';
+
+    if (titleText.includes(normalizedQuery) || subtitleText.includes(normalizedQuery) || badgeText.includes(normalizedQuery)) {
+      card.classList.remove('hidden-by-filter');
+      matchCount++;
+    } else {
+      card.classList.add('hidden-by-filter');
+    }
+  });
+
+  // If no specific doctors match, show temporary feedback
+  let noMatchMsg = document.getElementById('search-no-matches');
+  if (normalizedQuery && matchCount === 0) {
+    if (!noMatchMsg) {
+      noMatchMsg = document.createElement('div');
+      noMatchMsg.id = 'search-no-matches';
+      noMatchMsg.className = 'no-results-message';
+      noMatchMsg.innerHTML = `<i class="fa-solid fa-magnifying-glass"></i><p>No specialists match your search query. Try another name or select "Any Available Doctor".</p>`;
+      const grid = document.querySelector('#step-pane-3 .choice-cards-grid');
+      if (grid) grid.appendChild(noMatchMsg);
+    }
+  } else {
+    if (noMatchMsg) noMatchMsg.remove();
+  }
+}
+
 
 // Helper: Format Date String beautifully (e.g. 2026-05-25 -> Mon, May 25, 2026)
 function formatDateString(dateStr) {
