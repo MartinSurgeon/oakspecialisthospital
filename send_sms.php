@@ -8,7 +8,7 @@
 
 // 1. Core Configurations
 define('ZENOPH_API_KEY', '9bb2205bfa7ab3fa695254e68bf44fbcb0ecdaed0757612f9474d167be9a5ccd'); // Live Zenoph API Key
-define('ZENOPH_SENDER_ID', 'brandsprint');          // Live Sender ID
+define('ZENOPH_SENDER_ID', 'OAKHOSPITAL');          // Live Sender ID
 
 header('Content-Type: application/json');
 
@@ -61,9 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (ZENOPH_API_KEY === 'YOUR_ZENOPH_API_KEY') {
         $salutation = (empty($name) || $name === 'Client' || $name === 'Unknown Client') ? 'Hello' : "Hello {$name}";
         if ($type === 'virtual') {
-            $clientMessage = "{$salutation}, your Virtual consultation in {$dept} with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}. A secure Google Meet calendar invite link has been sent to your email. We look forward to meeting you online! Thank you.";
+            $clientMessage = "{$salutation}, your Virtual consultation ({$dept}) with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}.\r\nGoogle Meet calendar invite link has been sent to your email.\r\nOak Specialist Hospital:\r\n+233 50 976 0659";
         } else {
-            $clientMessage = "{$salutation}, your In-Person consultation in {$dept} with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}. Location: Bek-Egg Hotel Rd, Fankyenebra-Santasi, Kumasi. Google Maps: https://maps.google.com/?q=Oak+Specialist+Hospital+Kumasi. Please arrive 15 mins prior. Thank you.";
+            $clientMessage = "{$salutation}, your In-Person consultation ({$dept}) with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}.\r\nLocation: Bek-Egg Hotel Rd, Fankyenebra-Santasi.\r\nMap: https://maps.google.com/?q=Oak+Specialist+Hospital+Kumasi\r\nOak Specialist Hospital:\r\n+233 50 976 0659";
         }
         // Fallback simulation mode (for testing locally before getting live credentials)
         echo json_encode([
@@ -87,9 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $salutation = (empty($name) || $name === 'Client' || $name === 'Unknown Client') ? 'Hello' : "Hello {$name}";
         
         if ($type === 'virtual') {
-            $clientMessage = "{$salutation}, your Virtual consultation in {$dept} with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}. A secure Google Meet calendar invite link has been sent to your email. We look forward to meeting you online! Thank you.";
+            $clientMessage = "{$salutation}, your Virtual consultation ({$dept}) with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}.\r\nGoogle Meet calendar invite link has been sent to your email.\r\nOak Specialist Hospital:\r\n+233 50 976 0659";
         } else {
-            $clientMessage = "{$salutation}, your In-Person consultation in {$dept} with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}. Location: Bek-Egg Hotel Rd, Fankyenebra-Santasi, Kumasi. Google Maps: https://maps.google.com/?q=Oak+Specialist+Hospital+Kumasi. Please arrive 15 mins prior. Thank you.";
+            $clientMessage = "{$salutation}, your In-Person consultation ({$dept}) with {$doctor} at Oak Specialist Hospital has been scheduled{$dateTimeText}.\r\nLocation: Bek-Egg Hotel Rd, Fankyenebra-Santasi.\r\nMap: https://maps.google.com/?q=Oak+Specialist+Hospital+Kumasi\r\nOak Specialist Hospital:\r\n+233 50 976 0659";
         }
         
         $clientSms->setMessage($clientMessage);

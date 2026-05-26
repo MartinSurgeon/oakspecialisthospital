@@ -346,7 +346,9 @@ function generateCalendarSchedule() {
 
   // Toggle form vs calendar based on client details state
   if (state.clientDetails) {
+    const nameEl = document.getElementById('client-name');
     const phoneEl = document.getElementById('client-phone');
+    if (nameEl) nameEl.value = state.clientDetails.name || '';
     if (phoneEl) phoneEl.value = state.clientDetails.phone || '';
     
     if (formContainer) formContainer.style.display = 'none';
@@ -590,7 +592,7 @@ window.navigateToStep5 = function() {
   }
 
   const payload = {
-    name: 'Client',
+    name: state.clientDetails ? state.clientDetails.name : 'Client',
     email: '',
     phone: state.clientDetails ? state.clientDetails.phone : '',
     type: state.selections.type,
@@ -645,11 +647,18 @@ window.navigateToStep5 = function() {
 };
 
 window.submitBookingFormDetails = function() {
+  const nameEl = document.getElementById('client-name');
   const phoneEl = document.getElementById('client-phone');
 
-  if (!phoneEl) return;
+  if (!phoneEl || !nameEl) return;
 
+  const name = nameEl.value.trim();
   const phone = phoneEl.value.trim();
+
+  if (!name) {
+    alert('Please enter your name for a personalized message.');
+    return;
+  }
 
   if (!phone) {
     alert('Please enter your telephone number to receive booking confirmation.');
@@ -663,7 +672,7 @@ window.submitBookingFormDetails = function() {
   }
 
   // Save details in state
-  state.clientDetails = { phone };
+  state.clientDetails = { name, phone };
 
   // Generate / reload calendar schedule
   generateCalendarSchedule();

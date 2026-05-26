@@ -94,13 +94,13 @@
 }
 
 .progress-step.completed .step-node {
-  border-color: var(--brand-color);
-  background: var(--brand-color);
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
   color: #ffffff;
 }
 
 .progress-step.completed .step-label {
-  color: var(--brand-color);
+  color: var(--secondary-color);
 }
 
 /* Wizard Steps Wrapper */
@@ -242,8 +242,8 @@
 }
 
 .option-selection-card.selected .card-checked-indicator {
-  background: var(--brand-color);
-  border-color: var(--brand-color);
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 .option-selection-card.selected .card-checked-indicator i {
@@ -482,7 +482,7 @@
 }
 
 .summary-change-btn:hover {
-  color: var(--brand-color);
+  color: var(--secondary-color);
   text-decoration: underline;
 }
 
@@ -534,5 +534,14 @@
   
   .summary-change-btn {
     align-self: flex-end;
+  }
+}
+
+/* ==============================================================
+   Oak Specialist Hospital — Iframe Calendar embedding responsiveness
+   ============================================================== */
+@media (max-width: 767px) {
+  .calendar-iframe-wrapper {
+    height: 480px !important;
   }
 }

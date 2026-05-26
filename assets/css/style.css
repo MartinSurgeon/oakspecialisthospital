@@ -240,7 +240,7 @@ a.mdy-hover {
 /* Box-hover */
 
 .mediket-hover-btn {
-  background-color: var(--brand-color);
+  background-color: var(--secondary-color);
   height: 100%;
   top: 0;
   opacity: 0;
@@ -2535,7 +2535,7 @@ ul.testi-rating li {
 }
 
 .blogs-category {
-  background: var(--brand-color);
+  background: var(--secondary-color);
   padding: 12px 30px;
   position: relative;
   z-index: 1;;
@@ -2546,7 +2546,7 @@ ul.testi-rating li {
   content: '';
   left: 0;
   top: 0;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   height: 100%;
   width: 0;
   transition: 0.5s;
@@ -2565,7 +2565,7 @@ ul.testi-rating li {
   z-index: 1;
   font-size: 12px;
   text-transform: uppercase;
-  color: #041c33;
+  color: #fff;
   font-weight: 400;
   font-family: 'ClashDisplay-Variable';
   transition: 0.5s;
@@ -2926,6 +2926,10 @@ ul.footer-menu li a:hover {
   font-size: 16px;
   color: #ffffff;
   margin: 0;
+}
+
+.footer-bottom-menu {
+  display: none !important;
 }
 
 .footer-bottom-menu ul li {
@@ -7465,20 +7469,9 @@ to {
   color: #fff !important;
   background-color: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
-  display: inline-block !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  transition: background 0.35s ease, border-color 0.35s ease !important;
-}
 
-.case_study_sextion.style-2 .case_list .owl-prev i:hover,
-.case_study_sextion.style-2 .case_list .owl-next i:hover {
-  background: var(--secondary-color) !important;
-  border-color: var(--secondary-color) !important;
-}
 
-/* Ensure the case_item_left_side has enough bottom padding for the nav buttons */
-.case_study_sextion.style-2 .case_item_left_side {
-  padding-bottom: 90px !important;
-}
+
+
+
 
