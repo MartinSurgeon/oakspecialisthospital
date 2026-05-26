@@ -235,3 +235,61 @@ window.bindDynamicDoctorFiltering = function(deptSelectId, doctorSelectId) {
   });
 };
 
+// ==============================================================
+// Oak Specialist Hospital — Homepage Wishes Flyer Modal Controller
+// ==============================================================
+(function() {
+  function initFlyerModal() {
+    const flyerModal = document.getElementById('flyer-modal');
+    
+    // Verify we are on the homepage (contains .hero-section) and the modal element is present
+    if (flyerModal && document.querySelector('.hero-section')) {
+      // Prevent double initialization
+      if (flyerModal.dataset.initialized === 'true') return;
+      flyerModal.dataset.initialized = 'true';
+      
+      // Wait 1000ms for the page preloader transition to complete smoothly
+      setTimeout(() => {
+        flyerModal.classList.add('show');
+        
+        // Auto-close after 5000ms
+        const autoCloseTimer = setTimeout(() => {
+          closeFlyerModal();
+        }, 5000);
+        
+        // Manual close on close button
+        const closeBtn = document.getElementById('flyer-modal-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            clearTimeout(autoCloseTimer);
+            closeFlyerModal();
+          });
+        }
+        
+        // Manual close on clicking backdrop overlay
+        flyerModal.addEventListener('click', (e) => {
+          if (e.target === flyerModal) {
+            clearTimeout(autoCloseTimer);
+            closeFlyerModal();
+          }
+        });
+      }, 1000);
+    }
+    
+    function closeFlyerModal() {
+      if (flyerModal) {
+        flyerModal.classList.remove('show');
+      }
+    }
+  }
+
+  // Handle race conditions: trigger immediately if already loaded, otherwise listen for load event
+  if (document.readyState === 'complete') {
+    initFlyerModal();
+  } else {
+    $(window).on('load', initFlyerModal);
+  }
+})();
+
+
+

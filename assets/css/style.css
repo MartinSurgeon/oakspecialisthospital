@@ -7469,6 +7469,117 @@ to {
   color: #fff !important;
   background-color: transparent !important;
   border: 1px solid rgba(255, 255, 255, 0.35) !important;
+}
+
+/* ==============================================================
+   Oak Specialist Hospital — Premium Wishes Flyer Modal Popup
+   ============================================================== */
+.flyer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 41, 0.75); /* Deep rich overlay to match dark hospital branding */
+  backdrop-filter: blur(12px); /* Premium iOS-like glassmorphic blur */
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999; /* Highest priority, above everything including sticky header and page cursor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flyer-modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.flyer-modal-content {
+  position: relative;
+  max-width: 480px;
+  width: 85%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 
+              0 0 40px rgba(0, 128, 128, 0.2); /* Subtle glow with themed teal */
+  transform: scale(0.85) translateY(20px);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.flyer-modal-overlay.show .flyer-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+.flyer-modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.flyer-modal-close-btn:hover {
+  background: #ffffff;
+  color: #0b1a2d;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.flyer-img-container {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.flyer-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Elegant Countdown Progress Bar */
+.flyer-timer-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #008080, #00c4c4); /* Beautiful teal to light-teal gradient */
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.flyer-modal-overlay.show .flyer-timer-progress {
+  animation: flyerCountdown 5s linear forwards;
+}
+
+@keyframes flyerCountdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
 
 
 
