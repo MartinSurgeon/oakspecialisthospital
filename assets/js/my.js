@@ -291,5 +291,112 @@ window.bindDynamicDoctorFiltering = function(deptSelectId, doctorSelectId) {
   }
 })();
 
+// ==============================================================
+// Oak Specialist Hospital — Interactive 3D Hero Parallax & Reveal
+// ==============================================================
+(function() {
+  function initHeroAnimations() {
+    const heroThumb = document.querySelector('.hero-thumb');
+    if (!heroThumb) return;
+
+    const heroImg = heroThumb.querySelector('img');
+    if (!heroImg) return;
+
+    // --- 1. Entrance Reveal Transition ---
+    gsap.set(heroThumb, { opacity: 0, y: 50, scale: 0.95 });
+    
+    // Animate the entrance 1000ms after the page loader begins hiding
+    setTimeout(() => {
+      gsap.to(heroThumb, {
+        duration: 1.6,
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        ease: 'power4.out',
+        onComplete: () => {
+          // --- 2. Infinite Ambient Floating Loop ---
+          gsap.to(heroThumb, {
+            y: -12,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+          });
+        }
+      });
+    }, 1000);
+
+    // --- 3. Interactive 3D Mouse Parallax Tilt ---
+    let bounds;
+    
+    function rotateToMouse(e) {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const leftX = mouseX - bounds.x;
+      const topY = mouseY - bounds.y;
+      
+      // Calculate cursor position from -0.5 to 0.5 relative to center of image
+      const pctX = (leftX / bounds.width) - 0.5;
+      const pctY = (topY / bounds.height) - 0.5;
+      
+      // Maximum tilt of 12 degrees
+      const tiltX = -pctY * 12;
+      const tiltY = pctX * 12;
+
+      // Animate smoothly to target coordinates
+      gsap.to(heroImg, {
+        duration: 0.4,
+        rotateX: tiltX,
+        rotateY: tiltY,
+        scale: 1.04,
+        ease: 'power2.out',
+        overwrite: 'auto'
+      });
+    }
+
+    heroThumb.addEventListener('mouseenter', () => {
+      bounds = heroThumb.getBoundingClientRect();
+      
+      // Pause ambient float while interactive tracking is active
+      gsap.killTweensOf(heroThumb);
+      
+      document.addEventListener('mousemove', rotateToMouse);
+    });
+
+    heroThumb.addEventListener('mouseleave', () => {
+      document.removeEventListener('mousemove', rotateToMouse);
+      
+      // Smoothly return to center
+      gsap.to(heroImg, {
+        duration: 0.8,
+        rotateX: 0,
+        rotateY: 0,
+        scale: 1,
+        ease: 'power3.out',
+        overwrite: 'auto',
+        onComplete: () => {
+          // Resume ambient float
+          gsap.to(heroThumb, {
+            y: -12,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut',
+            overwrite: 'auto'
+          });
+        }
+      });
+    });
+  }
+
+  // Handle load event safely
+  if (document.readyState === 'complete') {
+    initHeroAnimations();
+  } else {
+    $(window).on('load', initHeroAnimations);
+  }
+})();
+
+
 
 

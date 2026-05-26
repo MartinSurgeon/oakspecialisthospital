@@ -7580,6 +7580,30 @@ to {
   }
 }
 
+/* ==============================================================
+   Oak Specialist Hospital — 3D Hero Parallax & Animation Setup
+   ============================================================== */
+.hero-thumb {
+  perspective: 1200px !important; /* Establishes a premium 3D perspective depth */
+  transform-style: preserve-3d !important;
+  will-change: transform !important;
+}
+
+.hero-thumb > img {
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important;
+  will-change: transform !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+  transition: box-shadow 0.4s ease !important;
+}
+
+/* Subtle glowing accent highlight when active/hovered */
+.hero-thumb:hover > img {
+  box-shadow: 0 25px 55px rgba(0, 128, 128, 0.25), 
+              0 0 30px rgba(0, 128, 128, 0.15) !important;
+}
+
+
 
 
 
